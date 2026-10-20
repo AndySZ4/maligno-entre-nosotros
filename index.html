@@ -404,6 +404,25 @@ body.touch #tbar button.go{height:42px!important;font-size:19px!important}
 #sc-icons{gap:8px!important}#sc-icons .icwrap{margin-top:4px}#sc-icons .duo p{font-size:15px!important}
 #icons canvas.icon{width:148px!important;height:148px!important}#sc-icons .icwrap{margin-top:22px!important}
 #sc-icons .prevnote{font-size:15px;padding:2px 10px}#sc-icons .duo>div{padding:6px 12px}#sc-icons .duo p{font-size:14px!important}
+.pinkpill{font-family:var(--f-lab);font-size:15px;letter-spacing:1.5px;font-weight:600;color:#0B0614;background:#FFB3DA;border:3px solid #0B0614;border-radius:999px;padding:3px 14px;box-shadow:3px 3px 0 #0B0614}
+.octgrid{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:12px;flex:1;min-height:0}.octgrid .pn p,.octgrid li{font-size:16px!important;line-height:1.3}.octgrid ul{margin:2px 0 0;padding-left:18px}.octgrid li{margin-bottom:4px}
+#sc-octubre{gap:10px!important}#sc-octubre .duo p{font-size:14.5px!important}
+.srcgrid{grid-template-columns:repeat(4,1fr)!important}.srcgrid ul{font-size:14px!important}
+/* lens bar */
+.lensbar{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-bottom:-6px}.lensbar span{font:600 11px 'Oswald',sans-serif;letter-spacing:1.5px;color:var(--muted);margin-right:4px}
+.lensbar button{font:600 11px 'Oswald',sans-serif;letter-spacing:.5px;padding:2px 9px;border-radius:999px;border:2px solid #4A3868;background:#1E1230;color:var(--muted);cursor:pointer;touch-action:manipulation}
+.lensbar button.on{background:#FFB3DA;color:#0B0614;border-color:#0B0614}
+.lensone{background:#FFF8EE;color:var(--inkc);border:3px solid var(--inkc);border-radius:14px;box-shadow:4px 4px 0 var(--inkc);padding:8px 14px}
+.lensone b{font-family:var(--f-lab);font-size:13px;letter-spacing:2px;color:#A8306A;display:block;font-weight:700}.lensone p{font-size:18px!important;line-height:1.3;color:var(--inkc)}
+.lensone.l-nino{background:#FFF3C9}.lensone.l-nino b{color:#9A6400}.lensone.l-est{background:#E8F1FF}.lensone.l-est b{color:#1E5DAA}.lensone.l-med{background:#E9FBF3}.lensone.l-med b{color:#127A55}
+/* glossary */
+.gl{border-bottom:2px dotted #FFB3DA;cursor:help}.duo .gl,.lensone .gl{border-bottom-color:#A8306A}
+#gcard{position:fixed;z-index:120;display:none;background:#FFF8EE;color:#0B0614;border:3px solid #0B0614;border-radius:14px;box-shadow:5px 5px 0 #0B0614;padding:10px 12px;font-family:'Atkinson Hyperlegible',sans-serif;font-size:14px;line-height:1.3}
+#gcard.on{display:block}#gcard>b{font:400 18px 'Lilita One',sans-serif;display:block;margin-bottom:4px}
+#gcard dl{display:grid;grid-template-columns:auto 1fr;gap:3px 8px;margin:0}#gcard dt{font:600 11px 'Oswald',sans-serif;letter-spacing:1px;color:#A8306A;padding-top:2px}#gcard dd{margin:0}
+#gcard button{margin-top:6px;border:2px solid #0B0614;background:#FFB3DA;border-radius:999px;padding:2px 12px;font:600 12px 'Oswald',sans-serif;float:right}
+.ribi{display:inline-block;width:14px;height:18px;vertical-align:-3px;margin-right:6px}.ribi svg{width:100%;height:100%}
+.octgrid{flex:none!important}
 /* ===== toolbar (all devices) ===== */
 #tbar{position:fixed;left:50%;bottom:max(6px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;z-index:100;padding:5px;border-radius:16px;background:rgba(14,8,24,.82);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);max-width:calc(100vw - 12px)}
 #tbar button{min-width:44px;height:44px;border-radius:12px;border:3px solid #0B0614;background:#FFF8EE;color:#0B0614;font:600 13px/1 'Oswald',sans-serif;letter-spacing:.5px;box-shadow:2px 2px 0 #0B0614;padding:0 10px;display:flex;align-items:center;gap:6px;cursor:pointer;touch-action:manipulation}
@@ -538,6 +557,8 @@ body.flow .funnel{grid-template-columns:1fr!important}body.flow .funnel .far{tra
 body.flow .aucx{grid-template-columns:1fr!important}
 body.flow .track2,body.flow .ticks2{margin-left:26px;margin-right:22px}
 body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-title .mut{font-size:17px!important}
+body.flow .octgrid,body.flow .srcgrid{grid-template-columns:1fr!important}body.flow .pinkpill{font-size:11px;text-align:center}
+body.flow .lensbar button{font-size:10px;padding:3px 8px}body.flow .lensone p{font-size:16px!important}
 
 </style>
 
@@ -554,7 +575,7 @@ body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-t
 <h1 style="font-size:112px;line-height:.88">Hay un <span class="r">maligno</span><br>entre nosotros</h1>
 <p class="mut" style="font-size:27px">Misión: desenmascarar a los malignos disfrazados de “benigno” · 569 punciones de mama · 5 máquinas</p>
 <div class="row" style="align-items:flex-end;gap:28px"><div id="hero" style="width:132px;height:182px"></div><div id="lineup" class="lineup"></div></div>
-<p class="lbl">LA PATÓLOGA INVESTIGA: ¿CUÁL DE ELLAS ES EL IMPOSTOR?</p>
+<p class="pinkpill"><span class="ribi"></span>OCTUBRE ROSA · 19 DE OCTUBRE, DÍA INTERNACIONAL DE LA LUCHA CONTRA EL CÁNCER DE MAMA</p>
 <button class="start blink" id="startbtn" type="button">▶ PRESIONA START</button>
 </div>
 </section>
@@ -1148,6 +1169,18 @@ body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-t
 </section>
 
 <!-- 29 CREDITS -->
+<section id="sc-octubre" class="scr" data-room="-1" data-lvl="OCTUBRE ROSA" data-pmood="happy" data-mood="w" data-say="Fuera del juego, la mejor detective eres tú: conoce tu cuerpo y no faltes a tu mamografía." data-taunt="¿Detección temprana? Eso sí es jugar sucio." data-note="Cierre de concientización. Octubre es el mes de concientización desde 1985; el 19 de octubre es el Día Internacional de la Lucha contra el Cáncer de Mama. Costa Rica: es el cáncer más frecuente en mujeres. Norma del Ministerio de Salud (2025): mamografía cada 2 años de 40 a 75 años sin factores de riesgo; con factores de riesgo, cada año según indicación médica. Hábitos según los CDC. No reemplaza la consulta médica.">
+<p class="eb"><span class="p ctx"><span class="ribi"></span>OCTUBRE ROSA</span>LA MISIÓN DE LA VIDA REAL<span class="kind k-med">CONTEXTO MÉDICO</span></p>
+<h2>Desenmascarar a tiempo también es tu misión</h2>
+<div class="octgrid">
+<div class="pn key rv"><span class="lbl k">¿POR QUÉ OCTUBRE?</span><p>Desde <b>1985</b>, octubre es el mes de concientización sobre el cáncer de mama. El <b>19 de octubre</b> es el Día Internacional de la Lucha contra el Cáncer de Mama.</p><p>En Costa Rica es el <b>cáncer más frecuente en mujeres</b>: cerca de <b>1.344</b> casos nuevos al año. En 2020 murieron <b>427</b> mujeres por esta causa.</p></div>
+<div class="pn ok rv"><span class="lbl m">DETECTAR A TIEMPO</span><ul><li><b>Mamografía cada 2 años de los 40 a los 75</b>, si no tienes factores de riesgo.</li><li>Con antecedentes familiares u otros factores de riesgo: <b>cada año</b>, a veces desde antes, según indique tu médico.</li><li>Conoce tus mamas y consulta pronto ante un <b>bulto</b> en la mama o la axila, cambios en la <b>piel</b> o el <b>pezón</b>, <b>secreción</b> o cambio de forma.</li></ul></div>
+<div class="pn svm rv"><span class="lbl b">HÁBITOS QUE AYUDAN</span><ul><li>Mantente <b>físicamente activa</b>.</li><li>Cuida un <b>peso saludable</b>, sobre todo después de la menopausia.</li><li><b>Limita el alcohol</b>.</li><li>Si es posible, la <b>lactancia materna</b> protege.</li><li>Habla con tu médico sobre <b>terapia hormonal</b> y tus <b>antecedentes familiares</b>.</li></ul></div>
+</div>
+<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Norma de Atención del Cáncer de Mama del Ministerio de Salud (2025): tamizaje bienal de 40 a 75 años en riesgo promedio; anual en riesgo aumentado; tiempos máximos para mamografía, informe y referencia.</p></div><div><b>PARA TODOS</b><p>Igual que en el juego: entre más temprano se desenmascara, más fácil es ganar. Ninguna señal reemplaza la consulta: si notas un cambio, ve al médico.</p></div></div>
+<p class="foot">Contexto médico · fuentes: El Orden Mundial (origen del mes) · El Observador 2026 (casos) y 2023 (muertes, informe UCR) · Ministerio de Salud de Costa Rica, norma 2025 (La Nación y Delfino) · CDC, factores de riesgo y síntomas · no sustituye la consulta médica</p>
+</section>
+
 <section id="sc-credits" class="scr" data-room="-1" data-lvl="CRÉDITOS" data-note="Créditos con las fuentes. Sirve de respaldo si preguntan de dónde salen los datos.">
 <p class="eb" style="justify-content:center">CRÉDITOS</p>
 <div class="credits"><div class="roll" id="roll">
@@ -1177,6 +1210,11 @@ body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-t
 <li>Citología mamaria: <a href="https://doi.org/10.1159/000501055" target="_blank" rel="noopener">Sistema Yokohama de la IAC (Field y col., Acta Cytol 2019)</a>; calibre de aguja en una serie: <a href="https://doi.org/10.1186/s42047-024-00148-2" target="_blank" rel="noopener">Surg Exp Pathol 2024</a>.</li>
 <li>Carcinoma invasivo de tipo no especial: <a href="https://www.iccr-cancer.org/docs/ICCR-Invasive-HistoTT.pdf" target="_blank" rel="noopener">ICCR, según la OMS 2019</a>.</li>
 <li>Supervivencia por etapa: <a href="https://www.cancer.org/cancer/types/breast-cancer/understanding-a-breast-cancer-diagnosis/breast-cancer-survival-rates.html" target="_blank" rel="noopener">American Cancer Society, datos SEER 2015–2021</a>.</li></ul></div>
+<div class="pn rv"><span class="lbl k">OCTUBRE ROSA Y PREVENCIÓN</span><ul>
+<li>Origen del mes y 19 de octubre: <a href="https://elordenmundial.com/hoy-en-la-historia/19-octubre/19-de-octubre-dia-internacional-contra-el-cancer-de-mama/" target="_blank" rel="noopener">El Orden Mundial</a>.</li>
+<li>Casos en Costa Rica: <a href="https://observador.cr/cancer-de-prostata-mama-estomago-y-colon-concentran-los-casos-mas-frecuentes-en-costa-rica/" target="_blank" rel="noopener">El Observador, 2026</a>; muertes: <a href="https://observador.cr/muertes-por-cancer-de-mama-han-aumentado-en-los-ultimos-10-anos-en-promedio-mueren-mas-de-400-mujeres-al-ano/" target="_blank" rel="noopener">El Observador, 2023 (informe UCR)</a>.</li>
+<li>Norma 2025 del Ministerio de Salud: <a href="https://www.nacion.com/el-pais/a-partir-de-cuando-debo-hacerme-la-mamografia-cada/I55WETFFENBM5LY7LAYCRVVODE/story/" target="_blank" rel="noopener">La Nación</a> y <a href="https://delfino.cr/2025/02/salud-actualiza-norma-para-mejorar-atencion-del-cancer-de-mama-en-costa-rica" target="_blank" rel="noopener">Delfino</a>.</li>
+<li>Hábitos y señales de alerta: <a href="https://www.cdc.gov/breast-cancer/es/risk-factors/index.html" target="_blank" rel="noopener">CDC, factores de riesgo</a> y <a href="https://www.cdc.gov/breast-cancer/es/symptoms/index.html" target="_blank" rel="noopener">síntomas</a>.</li></ul></div>
 <div class="pn rv"><span class="lbl k">SUPUESTOS Y PROPUESTAS</span><ul>
 <li>Costo FN:FP de 9:1: supuesto ilustrativo, no medido.</li>
 <li>Tres zonas, red de hospitales y auditoría: propuestas hipotéticas del autor.</li>
@@ -1989,6 +2027,82 @@ $$('.dimg').forEach(e=>{e.innerHTML=sprHTML(e.dataset.k,'cellsvg')});
 (function(){const VP=[51,55,59,63];$$('#icons > .col').forEach((c,i)=>{const sm=c.querySelector('.mut');if(!sm)return;const t=c.querySelector('.mid').textContent.split(' de ');
  sm.innerHTML='malignos colados entre sus “benignos” · '+sm.textContent.replace(' de cada 100',' de 100');
  c.insertAdjacentHTML('beforeend','<span class="unm">desenmascaró <b>'+VP[i]+'</b> de 64 malignos</span>')})})();
+
+/* ===== "Elige tu lente" (4 niveles de explicación) + glosario que se toca ===== */
+(function(){
+const L={
+truth:{med:'Es un estudio de validez diagnóstica: la máquina es la prueba índice y el diagnóstico confirmado es el estándar de referencia. De ahí salen sensibilidad, especificidad, VPN y VPP.',est:'Aprendizaje supervisado con partición estratificada 70/30 (398/171). Todas las métricas se calculan en la partición de prueba, sobre la tabla 2×2 predicción × verdad.',nino:'Es como un examen con las respuestas guardadas en un sobre. La máquina contesta y después abrimos el sobre para ver cuántas acertó.'},
+sala:{med:'Con LDA a 0,5, 13 de 64 carcinomas reciben un “benigno” del modelo: sensibilidad 79,7%. En la práctica, la triple evaluación sigue siendo la red de seguridad.',est:'Prevalencia en la prueba 64/171 = 37,4%. LDA a 0,5: VP 51, FN 13; sensibilidad 51/64 = 79,7%.',nino:'Hay 64 villanos escondidos entre 171 personas. Esta máquina atrapa 51, pero 13 se le escapan disfrazados de buenos.'},
+boss:{med:'Una prueba que siempre dice “negativo” tiene sensibilidad 0%: no sirve, aunque parezca acertar seguido.',est:'Clasificador trivial (clase mayoritaria): exactitud 357/569 = 62,7%, sensibilidad 0%. Con clases desbalanceadas, la exactitud engaña.',nino:'Es como un guardia que deja pasar a todos sin revisar. Acierta mucho porque casi todos son buenos… pero nunca atrapa a un villano.'},
+slide:{med:'Cada caso es una PAAF digitalizada: se trazan los núcleos y se resumen en rasgos (tamaño, borde, cromatina). Es la morfología nuclear que mira el citopatólogo, convertida en números.',est:'569 observaciones con 10 rasgos promedio por caso, sin datos faltantes; 212 malignos (37,3%). Variable respuesta binaria: maligno o benigno.',nino:'Le tomamos foto a las células y medimos qué tan grandes, manchadas y arrugaditas son. Las malas suelen ser más grandes y con muescas.'},
+clues:{med:'Los puntos cóncavos (irregularidad del borde nuclear) y el radio (tamaño) separan bien benignos de malignos; la dimensión fractal casi no ayuda.',est:'Diagramas de caja: los rangos intercuartílicos de puntos cóncavos y radio no se solapan entre clases; los de dimensión fractal sí, así que discrimina poco.',nino:'Si comparamos buenos y villanos con una pista y quedan en grupos separados, esa pista sirve para atraparlos.'},
+clones:{med:'Radio, perímetro y área miden lo mismo: el tamaño. Usarlas juntas distorsiona los OR. Se conserva una variable por concepto.',est:'Correlaciones de 0,92 a 1,00 producen colinealidad: coeficientes inestables y errores estándar inflados. Se retiene una variable por grupo (6 de 10).',nino:'Si tres amigos te cuentan el mismo chisme, no son tres pistas: es una sola contada tres veces.'},
+prep:{med:'Como en toda validación, la prueba se evalúa en casos que no se usaron para construirla. Límite: la selección de variables sí miró los 569 casos.',est:'Escalado z con μ y σ del entrenamiento para evitar fuga de información; k = 13 por LOOCV dentro del entrenamiento. Límite: la selección de variables usó el conjunto completo.',nino:'Estudias con unas preguntas y el examen trae otras. Si ves el examen antes, tu nota no vale.'},
+machines:{med:'Cada modelo entrega una probabilidad de malignidad, como un puntaje de riesgo. El umbral define desde qué puntaje la prueba es “positiva”.',est:'Cinco clasificadores (logística, Naive Bayes, kNN con k = 13, LDA y SVM radial con escalado de Platt) estiman P(maligno | x); el umbral convierte esa probabilidad en una decisión.',nino:'Cinco robots detectives miran la misma célula y cada uno dice qué tan sospechosa le parece, del 0 al 100.'},
+umbral:{med:'Es el punto de corte de la prueba: bajarlo aumenta la sensibilidad (menos falsos benignos) a costa de especificidad (más falsas alarmas).',est:'Se clasifica positivo si p ≥ t. Al bajar t aumentan VP y FP, y disminuyen FN y VN. Ejemplo ilustrativo con 24 casos.',nino:'Es una raya en el piso: desde ahí decimos “sospechoso”. Si la acercamos, atrapamos más villanos, pero también molestamos a más buenos.'},
+wave1:{med:'A 0,5, todos tienen exactitud parecida, pero la sensibilidad va de 79,7% (LDA) a 92,2% (SVM y kNN): la diferencia está en cuántos carcinomas se escapan.',est:'Exactitud de 92,4% a 95,3% en los cinco; FN de 5 a 13. La exactitud suma errores de distinto costo y esconde esa diferencia.',nino:'Todos los robots sacan nota parecida, pero unos dejan escapar muchos más villanos que otros.'},
+roc:{med:'La curva muestra, para cada punto de corte, sensibilidad contra tasa de falsos positivos. Pasar de 0,5 a 0,1 es subir por ella: 92,2% → 98,4% de sensibilidad y 2,8% → 9,3% de falsas alarmas.',est:'ROC: tasa de verdaderos positivos contra tasa de falsos positivos en todos los umbrales; AUC = 0,992. Los puntos 0,5 y 0,1 son reales; el trazo entre ellos es ilustrativo.',nino:'Es un camino: mientras más subimos, más villanos atrapamos, pero también nos asustamos con más buenos.'},
+aucx:{med:'Un AUC de 0,99 indica que el modelo casi siempre asigna más riesgo a un carcinoma que a una lesión benigna. Mide discriminación, no calibración, y no fija el punto de corte.',est:'AUC = P(puntaje maligno > puntaje benigno) = área bajo la ROC (equivale al estadístico de Mann-Whitney). IC 95% de Hanley y McNeil (1982), recortado en 1.',nino:'Ponemos un villano y un bueno frente al robot. Si casi siempre señala al villano, el robot es muy bueno ordenando.'},
+auc:{med:'Las cinco discriminan de forma excelente y sus intervalos se enciman: con 171 casos no se demostró que una sea superior.',est:'Discriminación excelente en las cinco. Los IC se superponen: no se demostró diferencia (la prueba formal sería DeLong). Eso no prueba equivalencia.',nino:'Los cinco robots son casi igual de buenos ordenando. Ninguno le gana claramente a los demás.'},
+emerg:{med:'Si se acepta que no detectar un carcinoma pesa como 9 falsas alarmas, el punto de corte que minimiza el costo es 0,1. Es un supuesto para discutir, no un costo medido.',est:'Regla de Bayes: positivo si p > C(FP) / (C(FP) + C(FN)). Con C(FN) = 9·C(FP), el umbral es 0,1. Supone probabilidades calibradas.',nino:'Si dejar escapar a un villano es 9 veces peor que molestar a un bueno, conviene ser bien desconfiado.'},
+dial:{med:'Bajar el corte reduce los falsos benignos en las cinco máquinas, pero caen la especificidad y el VPP: más estudios y biopsias que salen benignos.',est:'Al bajar el umbral sube la sensibilidad y bajan la especificidad y el VPP. La exactitud sube o baja según la máquina: no es una mejora gratis.',nino:'Al mover la raya se escapan menos villanos, pero sonamos la alarma con más buenos.'},
+wave2:{med:'Por cada carcinoma adicional detectado, el Escáner suma 1,75 falsas alarmas y el Comparador 4,75: mismo beneficio, distinto costo para las pacientes sanas.',est:'Costo marginal (FP extra por cada FN evitado): LDA 0,9 · Log. 1,3 · SVM 1,75 · NB 2,0 · kNN 4,75.',nino:'Dos robots atrapan los mismos 4 villanos extra, pero uno asusta a muchos más buenos para lograrlo.'},
+tie:{med:'A igual sensibilidad (98,4%), se prefiere la prueba más específica: SVM 90,7% contra kNN 79,4%.',est:'Mismo número de FN (1); la elección se define por la especificidad. Coincidir en cantidad no implica fallar en el mismo caso.',nino:'Empatan en villanos atrapados; gana el que menos se equivoca con los buenos.'},
+icons:{med:'Probabilidad de malignidad tras un “benigno” del modelo (1 − VPN): 10,8% con LDA a 0,5 frente a 1,0% con SVM a 0,1, con una prevalencia del 37%.',est:'1 − VPN = FN/(FN + VN). Por máquina a 0,5: 10,8% → 7,9% → 4,6%; por umbral en SVM: 4,6% → 1,0%. Depende de la prevalencia.',nino:'En la fila de los que el robot dejó pasar, a veces se cuela un villano. Con el mejor robot y la raya bien puesta, se cuela 1 de cada 100.'},
+triage:{med:'La zona intermedia (0,1–0,5) concentra 11 casos, entre ellos 4 de los 5 carcinomas que el corte 0,5 dejaba pasar: ahí tiene sentido una segunda prueba, como la biopsia con aguja gruesa.',est:'Dos umbrales definen tres estratos de riesgo; el estrato intermedio (11 casos) contiene 4 de los 5 FN del umbral 0,5.',nino:'En vez de solo “bueno” o “malo”, hay una zona de “mmm, revisemos otra vez”.'},
+bugs:{med:'Es una validación interna con una sola muestra de un centro: antes de cualquier uso clínico falta validación externa, calibración y auditoría.',est:'Umbral y variables no se validaron aparte: 63 de 64 es una estimación optimista. Falta validación cruzada anidada y externa (TRIPOD+AI).',nino:'Practicamos con las mismas preguntas del examen; ahora hay que probar con preguntas nuevas.'}
+};
+const NAMES={doble:'Clínico + Todos',med:'Médico',est:'Estadístico',todos:'Todos',nino:'Niño'};
+let lens='doble';try{lens=localStorage.getItem('maligno_lens')||'doble'}catch(e){}
+Object.keys(L).forEach(id=>{const sec=document.getElementById('sc-'+id);if(!sec)return;const box=sec.querySelector('.duo,.dual');if(!box)return;
+ const ps=box.querySelectorAll(':scope>div p, :scope>.pn p');L[id].todos=ps[ps.length-1]?ps[ps.length-1].innerHTML:'';
+ const bar=document.createElement('div');bar.className='lensbar';bar.setAttribute('role','group');bar.setAttribute('aria-label','Elige tu lente');
+ bar.innerHTML='<span>👓 LENTE</span>'+Object.keys(NAMES).map(k=>'<button type="button" data-l="'+k+'">'+NAMES[k]+'</button>').join('');
+ const one=document.createElement('div');one.className='lensone';box.parentNode.insertBefore(bar,box);box.insertAdjacentElement('afterend',one);
+ bar.querySelectorAll('button').forEach(b=>{['pointerdown','touchstart'].forEach(t=>b.addEventListener(t,e=>e.stopPropagation(),{passive:true}));b.addEventListener('click',e=>{e.stopPropagation();ac();setLens(b.dataset.l);SFX.select()})});
+ sec.__lens={box,one,bar,id}});
+function apply(sec){const o=sec.__lens;if(!o)return;o.bar.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.l===lens));
+ if(lens==='doble'){o.box.style.display='';o.one.style.display='none'}else{o.box.style.display='none';o.one.style.display='';o.one.innerHTML='<b>PARA '+(lens==='nino'?'UN NIÑO':lens==='todos'?'TODOS':lens==='med'?'EL MÉDICO':'EL ESTADÍSTICO')+'</b><p>'+L[o.id][lens]+'</p>';o.one.className='lensone l-'+lens;glossify(o.one)}}
+function setLens(k){lens=k;try{localStorage.setItem('maligno_lens',k)}catch(e){}$$('.scr').forEach(apply)}
+addEventListener('keydown',e=>{if(e.key==='l'||e.key==='L'){const ks=Object.keys(NAMES);setLens(ks[(ks.indexOf(lens)+1)%ks.length])}});
+/* ---- glosario ---- */
+const G=[
+ [/falsos? benignos?/i,'Falso benigno','Carcinoma que el modelo clasifica como benigno (falso negativo).','FN: caso positivo predicho como negativo.','Un maligno disfrazado que la máquina llamó “benigno”.','Un villano disfrazado de bueno que se nos coló.'],
+ [/falsas? alarmas?/i,'Falsa alarma','Lesión benigna que el modelo marca como maligna (falso positivo); suele llevar a más estudios.','FP: caso negativo predicho como positivo.','La máquina dice “maligno” y era benigno.','El robot gritó “¡villano!” y era un bueno.'],
+ [/sensibilidad/i,'Sensibilidad','Proporción de carcinomas que la prueba detecta: VP/(VP+FN).','Tasa de verdaderos positivos (recall).','De todos los malignos, cuántos desenmascara.','De todos los villanos, cuántos atrapamos.'],
+ [/especificidad/i,'Especificidad','Proporción de lesiones benignas que la prueba deja como negativas: VN/(VN+FP).','Tasa de verdaderos negativos; 1 − especificidad = tasa de falsos positivos.','De todos los benignos, cuántos deja tranquilos.','De todos los buenos, a cuántos no molestamos.'],
+ [/\bVPN\b/,'VPN · valor predictivo negativo','Probabilidad de que un resultado “benigno” sea realmente benigno: VN/(VN+FN). Depende de la prevalencia.','VN/(VN+FN); varía con la prevalencia.','Si la máquina dice “benigno”, qué tan seguido es cierto.','Cuando el robot dice “es bueno”, cuántas veces tiene razón.'],
+ [/\bVPP\b|\bprecisión\b/i,'VPP · precisión','Probabilidad de que un resultado “maligno” sea realmente maligno: VP/(VP+FP).','Valor predictivo positivo o precision: VP/(VP+FP).','Si la máquina dice “maligno”, qué tan seguido es cierto.','Cuando el robot grita “¡villano!”, cuántas veces tiene razón.'],
+ [/exactitud/i,'Exactitud','Proporción de aciertos totales. Engaña cuando una clase es mucho más frecuente.','(VP+VN)/n; poco informativa con clases desbalanceadas.','Cuántos aciertos en total, sin distinguir qué tipo de error.','La nota total del examen, aunque se te escapen los villanos.'],
+ [/umbral/i,'Umbral','Punto de corte de la prueba: desde qué probabilidad el resultado es “maligno”.','Valor t tal que se predice positivo si p ≥ t.','El criterio: desde cuánta sospecha la máquina dice “maligno”.','La raya en el piso desde la que decimos “sospechoso”.'],
+ [/\bAUC\b/,'AUC · área bajo la curva','Capacidad de discriminar: probabilidad de que un carcinoma reciba más riesgo que una lesión benigna.','Area Under the ROC Curve = P(puntaje+ > puntaje−).','Qué tan seguido la máquina sospecha más de la maligna que de la benigna.','Si pones un villano y un bueno, qué tan seguido el robot señala al villano.'],
+ [/\bROC\b/,'Curva ROC','Sensibilidad frente a 1 − especificidad para todos los puntos de corte.','Receiver Operating Characteristic: TPR contra FPR.','El camino entre detectar más y dar más falsas alarmas.','Un camino: más arriba, más villanos atrapados y más sustos.'],
+ [/\bIC( 95%)?\b/,'IC 95% · intervalo de confianza','Rango de valores compatibles con los datos para la cifra real.','Intervalo que cubre el parámetro en el 95% de muestras repetidas.','El margen de duda por haber medido con pocos casos.','“Más o menos entre aquí y aquí”.'],
+ [/prevalencia/i,'Prevalencia','Proporción de casos con la enfermedad en la población evaluada.','P(enfermedad) en la muestra; afecta al VPP y al VPN.','Qué tanto hay de malignos en el grupo.','Cuántos villanos hay en el pueblo.'],
+ [/colinealidad/i,'Colinealidad','Variables que miden lo mismo, como radio y área.','Alta correlación entre predictores: coeficientes inestables.','Dos medidas que dicen lo mismo y confunden al modelo.','Dos pistas que en realidad son la misma.'],
+ [/\bPAAF\b/,'PAAF','Punción aspiración con aguja fina: se obtienen células del nódulo para citología.','Fuente de las imágenes de las que salen las variables.','Sacar unas células del bulto con una aguja delgadita.','Con una aguja finita sacamos células para mirarlas.'],
+ [/odds ratio/i,'Odds ratio (OR)','Cuánto se multiplican las odds de malignidad por cada desviación estándar más de la variable, con lo demás constante.','exp(β) en la regresión logística.','Cuánto sube la sospecha cuando una medida crece.','Cuánto más sospechoso se vuelve alguien con una pista más fuerte.']
+];
+const card=document.createElement('div');card.id='gcard';card.setAttribute('role','dialog');document.body.appendChild(card);
+['click','pointerdown','touchstart','keydown'].forEach(t=>card.addEventListener(t,e=>e.stopPropagation()));
+function showCard(i,el){const g=G[i],r=el.getBoundingClientRect();
+ card.innerHTML='<b>'+g[1]+'</b><dl><dt>Médico</dt><dd>'+g[2]+'</dd><dt>Estadístico</dt><dd>'+g[3]+'</dd><dt>Todos</dt><dd>'+g[4]+'</dd><dt>Niño</dt><dd>'+g[5]+'</dd></dl><button type="button">Cerrar</button>';
+ card.querySelector('button').onclick=()=>card.classList.remove('on');card.classList.add('on');
+ const w=Math.min(340,innerWidth-16),x=Math.max(8,Math.min(innerWidth-w-8,r.left));card.style.width=w+'px';card.style.left=x+'px';
+ const below=r.bottom+8,ch=card.offsetHeight;card.style.top=(below+ch<innerHeight-60?below:Math.max(8,r.top-ch-8))+'px'}
+document.addEventListener('click',e=>{if(!e.target.closest('#gcard,.gl'))card.classList.remove('on')});
+function glossify(root){const done=new Set();root.querySelectorAll('.gl').forEach(g=>done.add(+g.dataset.g));
+ const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p||p.closest('h1,h2,button,.lbl,.eb,.kind,.gl,.tag,.h,svg,canvas,.lensbar,.qopt,label,.ax,#hudlvl,.num,.big,.mid,b.k'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});
+ const nodes=[];while(walk.nextNode())nodes.push(walk.currentNode);
+ nodes.forEach(n=>{for(let i=0;i<G.length;i++){if(done.has(i))continue;const m=G[i][0].exec(n.nodeValue);if(!m)continue;
+  const after=n.splitText(m.index);after.nodeValue=after.nodeValue.slice(m[0].length);const s=document.createElement('span');s.className='gl';s.dataset.g=i;s.tabIndex=0;s.textContent=m[0];after.parentNode.insertBefore(s,after);done.add(i);n=after}})}
+$$('.scr').forEach(sec=>glossify(sec));
+document.addEventListener('click',e=>{const g=e.target.closest('.gl');if(!g)return;e.stopPropagation();e.preventDefault();showCard(+g.dataset.g,g)},true);
+document.addEventListener('keydown',e=>{const g=document.activeElement;if(g&&g.classList&&g.classList.contains('gl')&&e.key==='Enter'){showCard(+g.dataset.g,g)}});
+setLens(lens);
+})();
+
+$$('.ribi').forEach(e=>{e.innerHTML=svgRibbon()});
 
 /* ===== UI: toolbar for every device, audio panel, reading (flow) layout for small screens ===== */
 (function(){
