@@ -320,6 +320,45 @@ body.touch #tbar button.go{height:42px!important;font-size:19px!important}
 .rkimg.lock .badge{background:#4A3868;color:#C9C2DA}
 .rank{justify-content:space-around!important}
 .rank .hcv2{width:132px!important;height:126px!important}#sc-net{gap:10px!important}#sc-net .phase p{font-size:17px!important;line-height:1.25}#sc-net .pn.hot p{font-size:18px!important}
+/* ---- comité slider ---- */
+.comite{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:rgba(14,8,24,.6);border:3px dashed #FFB3DA;border-radius:14px;padding:6px 14px;margin:0 30px}
+.comite label{font-family:var(--f-lab);letter-spacing:1.5px;font-size:14px;color:#FFB3DA}
+.comite input{flex:1;min-width:180px;accent-color:#FFB3DA;height:30px}
+.comite #ugoal{flex-basis:100%;font-size:16px}.comite.win{border-color:#43CF98;border-style:solid;background:rgba(25,158,112,.15)}
+#sc-umbral{gap:8px!important}#sc-umbral .row:has(#uimp)>p:not(.hint){display:none}.comite{margin-top:16px!important}
+/* ---- quiz ---- */
+.qopts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px}
+.qopt{display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-align:left;cursor:pointer;background:#2B1C45;color:var(--ink);border:4px solid #8C7FA8;border-radius:18px;padding:16px 18px;box-shadow:5px 5px 0 #0B0614;font:400 22px/1.25 'Atkinson Hyperlegible',sans-serif;min-height:150px;touch-action:manipulation}
+.qopt b{font:400 34px/1 'Lilita One',sans-serif;color:#FFB3DA}
+.qopt:hover:not(:disabled){border-color:#FFB3DA;transform:translateY(-2px)}
+.qopt.right{border-color:#43CF98;background:rgba(25,158,112,.22)}.qopt.right b{color:#43CF98}
+.qopt.wrong{border-color:#e66767;background:rgba(230,103,103,.18)}.qopt.wrong b{color:#e66767}
+.qopt:disabled{cursor:default}.qopt:disabled:not(.right):not(.wrong){opacity:.55}
+.qfb{margin-top:6px}.qfb p{font-size:21px}
+/* ---- calculator ---- */
+.calc{display:grid;grid-template-columns:400px 1fr;gap:18px;flex:1;min-height:0}
+.cpick{display:flex;flex-direction:column;gap:10px}
+.cmach{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.cmb{display:flex;flex-direction:column;align-items:center;gap:2px;background:#2B1C45;border:3px solid #4A3868;border-radius:12px;padding:4px 2px;cursor:pointer;color:var(--ink);touch-action:manipulation}
+.cmb .cimg{width:52px;height:58px}.cmb .cn{font:600 11px 'Oswald',sans-serif;letter-spacing:.5px}
+.cmb.on{border-color:var(--acc);background:color-mix(in srgb,var(--acc) 22%,#2B1C45);box-shadow:0 0 0 2px var(--acc)}
+.cth{display:flex;align-items:center;gap:8px}.cbt{flex:1;font:400 26px 'Lilita One',sans-serif;background:#2B1C45;color:var(--ink);border:3px solid #4A3868;border-radius:12px;padding:4px;cursor:pointer}
+.cbt.on{border-color:#FFB3DA;background:#FFB3DA;color:#0B0614}
+.cexp p{font-size:17px!important;line-height:1.3}
+.cout{display:flex;flex-direction:column;gap:10px}
+.cmat{display:grid;grid-template-columns:90px 1fr 1fr;gap:8px}.cmat .ax{font-family:var(--f-lab);font-size:12px;color:var(--muted);display:flex;align-items:center;justify-content:center;text-align:center}
+.cmat .pn{padding:6px 10px!important;align-items:center}.cmat .big{font-size:38px!important}.cmat i{font-style:normal;font-size:18px}
+.cmet{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cmet div{background:rgba(14,8,24,.55);border-radius:10px;padding:6px 10px;display:flex;flex-direction:column}
+.cmet b{font:600 12px 'Oswald',sans-serif;letter-spacing:1.5px;color:#B6ACF6}.cmet .v{font:400 24px 'Lilita One',sans-serif}.cmet .w{font-size:14px;color:var(--muted);line-height:1.2}
+
+.cmet{grid-template-columns:repeat(6,1fr)}.cmet .v{font-size:20px}.cmet .w{font-size:12px}.cmet b{font-size:11px;letter-spacing:.5px}
+/* dialog fully hidden when not speaking (no edge peeking) */
+#dlg{transform:translateY(calc(100% + 90px))!important;opacity:0;visibility:hidden;transition:transform .3s ease,opacity .25s ease,visibility 0s linear .3s!important}
+#dlg.on{transform:none!important;opacity:1;visibility:visible;transition:transform .3s ease,opacity .2s ease,visibility 0s!important}
+.funnel{display:grid;grid-template-columns:1fr 34px 1.4fr 34px 1.5fr;gap:8px;align-items:stretch}
+.funnel .far{display:grid;place-items:center;color:#FFB3DA;font-size:22px}.funnel .pn p{font-size:18px!important;line-height:1.3}.funnel .fsplit{font-size:20px!important}
+.icwrap{margin-top:14px}
 /* ===== toolbar (all devices) ===== */
 #tbar{position:fixed;left:50%;bottom:max(6px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;z-index:100;padding:5px;border-radius:16px;background:rgba(14,8,24,.82);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);max-width:calc(100vw - 12px)}
 #tbar button{min-width:44px;height:44px;border-radius:12px;border:3px solid #0B0614;background:#FFF8EE;color:#0B0614;font:600 13px/1 'Oswald',sans-serif;letter-spacing:.5px;box-shadow:2px 2px 0 #0B0614;padding:0 10px;display:flex;align-items:center;gap:6px;cursor:pointer;touch-action:manipulation}
@@ -442,6 +481,15 @@ body.flow #boss2{width:96px!important;height:104px!important}body.flow #hero2{wi
 /* threshold label sits beside the line, not on it */
 body.flow .uline span{left:10px;font-size:11px;padding:0 6px}
 body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!important}body.flow .path .ar{transform:rotate(90deg);align-self:center}body.flow .path .pn p{font-size:16px!important}
+body.flow .qopts{grid-template-columns:1fr!important}body.flow .qopt{min-height:0;font-size:17px;padding:12px 14px;flex-direction:row;align-items:center}body.flow .qopt b{font-size:26px}
+body.flow .qfb p{font-size:16px!important}
+body.flow .comite{margin:0 4px;padding:8px 10px}body.flow .comite #ugoal{font-size:14px}
+body.flow .calc{grid-template-columns:1fr!important}
+body.flow .cmb .cimg{width:42px;height:46px}body.flow .cmb .cn{font-size:9px}
+body.flow .cmat{grid-template-columns:62px minmax(0,1fr) minmax(0,1fr)!important}body.flow .cmat .ax{font-size:9px}body.flow .cmat .big{font-size:28px!important}body.flow .cmat .lbl{font-size:9px!important}
+body.flow .cmet{grid-template-columns:1fr 1fr!important}body.flow .cmet .v{font-size:20px}
+body.flow .cmet{grid-template-columns:1fr 1fr!important}
+body.flow .funnel{grid-template-columns:1fr!important}body.flow .funnel .far{transform:rotate(90deg)}
 
 </style>
 
@@ -470,6 +518,19 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </section>
 
 <!-- 2 SALA -->
+<section id="sc-truth" class="scr" data-room="0" data-lvl="SALA DE ESPERA" data-pmood="explain" data-mood="s" data-say="Cada caso ya tiene su respuesta confirmada. El examen es ver si la máquina la adivina." data-taunt="¿Diagnóstico confirmado? Qué injusto, así no hay misterio." data-note="Pantalla de ubicación. El laboratorio es como validar una prueba diagnóstica nueva contra el diagnóstico confirmado. Nadie se descarta: cada una de las 569 pacientes ya trae su diagnóstico final (212 malignos, 357 benignos). Las máquinas aprenden con 398 y se examinan con 171 que nunca vieron (64 malignos, 107 benignos). Todos los conteos que siguen son de ese examen de 171.">
+<p class="eb"><span class="p">P1</span>¿DE DÓNDE SALE LA VERDAD?<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
+<h2>Una prueba nueva contra el diagnóstico confirmado</h2>
+<div class="funnel">
+<div class="pn rv"><span class="lbl k">LA BASE</span><b class="big">569</b><p>punciones de mama digitalizadas</p></div><div class="far">▶</div>
+<div class="pn rv"><span class="lbl k">LA VERDAD</span><p class="fsplit"><b class="mid r">212</b> malignos · <b class="mid l">357</b> benignos</p><p>Cada caso ya trae su <b>diagnóstico confirmado</b>. Es la respuesta correcta del examen.</p></div><div class="far">▶</div>
+<div class="pn rv"><span class="lbl k">APRENDER Y EXAMINAR</span><p><b class="mid">398</b> para aprender <span class="mut">(148 malignos)</span></p><p><b class="mid k">171</b> para el examen <span class="mut">(64 malignos · 107 benignos, nunca vistos)</span></p></div>
+</div>
+<div class="pn hot rv"><p style="font-size:21px">En el examen, la máquina dice “maligno” o “benigno” y se compara con la verdad. Si dice <b>“benigno”</b> y la verdad era <b class="r">maligno</b>, es un <b class="r">falso benigno</b>: el disfrazado que queremos desenmascarar.</p></div>
+<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Es validar una prueba diagnóstica contra el estándar de referencia: sensibilidad, especificidad, VPN y VPP salen de la tabla 2×2 del examen de 171.</p></div><div><b>PARA TODOS</b><p>Nadie se descarta: cada paciente ya tiene su respuesta. Vemos si la máquina la adivina y ajustamos qué tan desconfiada es.</p></div></div>
+<p class="foot">Resultado del laboratorio · Breast Cancer Wisconsin (Diagnostic) · partición estratificada 70/30 · todos los conteos siguientes son del examen de 171 casos</p>
+</section>
+
 <section id="sc-sala" data-mood="s" data-taunt="171 en la sala y nadie sospecha de mí. Me encanta este hospital." class="scr" data-room="0" data-lvl="SALA DE ESPERA" data-level="SALA DE ESPERA|0" data-fn="13" data-say="171 punciones; 64 son malignas. ¿Cuántas se disfrazan de benigno?" data-note="El gancho. Deja que vean parpadear los 13 tumores malignos que el modelo no detecta antes de hablar de estadística. Los impostores son los tumores, no las pacientes. Es LDA con umbral 0,5. Es una predicción del modelo, no una decisión médica: en la práctica la clínica y la imagen siguen contando.">
 <p class="eb"><span class="p">P1</span>LA SALA DE ESPERA<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2>171 mujeres esperan el resultado de su punción</h2>
@@ -497,6 +558,15 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Clasificador trivial: exactitud = proporción de benignos (62,7%) y sensibilidad 0%. La exactitud engaña con clases desbalanceadas.</p></div><div><b>PARA TODOS</b><p>Decir “benigno” a todas acierta 6 de cada 10 veces… y no encuentra ni un cáncer.</p></div></div>
 <p class="foot">Resultado del laboratorio · línea base sobre los 569 casos · VPN = de los casos que el modelo llama “benigno”, cuántos lo son: 62,7%</p>
 </section>
+
+<section id="sc-q1" class="scr quizscr" data-room="0" data-lvl="SALA DE ESPERA" data-ok="1" data-good="¡Exacto! Los 212 malignos pasan disfrazados: 212 falsos benignos. La exactitud sola engaña." data-bad="No es eso: el problema es que no desenmascara a ninguno. Los 212 malignos pasan como “benignos”." data-mood="s" data-taunt="¿Un quiz? Voten por la A, confíen en mí." data-note="Quiz 1. Respuesta B. El Sello no da ninguna falsa alarma (nunca dice maligno); su problema es que todos los malignos son falsos benignos.">
+<p class="eb"><span class="p">P1</span>QUIZ RELÁMPAGO<span class="kind k-lab">PREGUNTA AL PÚBLICO</span></p>
+<h2>El Sello «Todo Benigno» acierta 62,7%. ¿Por qué no sirve?</h2>
+<div class="qopts"><button type="button" class="qopt" data-i="0"><b>A</b><span>Porque 62,7% es una exactitud baja</span></button><button type="button" class="qopt" data-i="1"><b>B</b><span>Porque deja pasar a todos los malignos como “benignos”</span></button><button type="button" class="qopt" data-i="2"><b>C</b><span>Porque da demasiadas falsas alarmas</span></button></div>
+<div class="pn qfb" aria-live="polite"><p>Toquen una respuesta (o usen las teclas 1, 2 y 3).</p></div>
+<p class="foot">Después de responder, ▶ sigue el recorrido</p>
+</section>
+
 
 <!-- 4 ANATOMY -->
 <section id="sc-anat" data-mood="s" data-taunt="La TDLU: tranquila, despensa llena y vista al pezón. Cinco estrellas." class="scr" data-room="1" data-lvl="CONSULTORIO" data-level="CONSULTORIO|1" data-say="La mayoría de los carcinomas nace en la TDLU. Ahí empieza la búsqueda." data-note="Contexto clínico. La glándula tiene aproximadamente 15 a 20 lóbulos que drenan por conductos al pezón. Wellings y colaboradores (1975) mostraron que la mayoría de las lesiones precursoras y de los carcinomas in situ se originan en la unidad ductolobulillar terminal. Ahí aparece el nódulo.">
@@ -705,11 +775,21 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <p class="foot">Escáner (SVM) con umbral en 0,5, conjunto de prueba · VP/VN = verdadero positivo/negativo · FP/FN = falso positivo/negativo</p>
 </section>
 
+<section id="sc-q2" class="scr quizscr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-ok="1" data-good="¡Correcto! Es un maligno disfrazado: el FN de la matriz. Es el que queremos desenmascarar." data-bad="Casi: eso es otra puerta de la matriz. El falso benigno es un maligno que la máquina llama “benigno” (FN)." data-mood="s" data-taunt="Pregunta trampa: la respuesta correcta es “no existen los disfrazados”." data-note="Quiz 2. Respuesta B. A es un falso positivo (falsa alarma); C es un verdadero negativo.">
+<p class="eb"><span class="p">P6</span>QUIZ RELÁMPAGO<span class="kind k-lab">PREGUNTA AL PÚBLICO</span></p>
+<h2>¿Qué es un falso benigno?</h2>
+<div class="qopts"><button type="button" class="qopt" data-i="0"><b>A</b><span>Un benigno que la máquina llama “maligno”</span></button><button type="button" class="qopt" data-i="1"><b>B</b><span>Un maligno que la máquina llama “benigno”</span></button><button type="button" class="qopt" data-i="2"><b>C</b><span>Un benigno bien clasificado</span></button></div>
+<div class="pn qfb" aria-live="polite"><p>Toquen una respuesta (o usen las teclas 1, 2 y 3).</p></div>
+<p class="foot">Después de responder, ▶ sigue el recorrido</p>
+</section>
+
+
 <!-- UMBRAL -->
 <section id="sc-umbral" class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-steps="1" data-pmood="think" data-mood="w" data-taunt="¿Una línea que decide si soy sospechosa? Esto es discriminación." data-say="Cada célula recibe una probabilidad. El umbral es el criterio: bajarlo es nuestra herramienta para desenmascarar a los disfrazados." data-note="Concepto clave antes de las oleadas. Dibujo con 24 células y probabilidades inventadas. Con umbral 0,5 quedan 4 malignas del lado benigno y 1 benigna del lado maligno. Presiona → y el umbral baja a 0,1: queda 1 maligna escondida y 7 benignas reciben una falsa alarma. Es el mismo intercambio que verán con los datos reales.">
 <p class="eb"><span class="p">P6–P9</span>¿QUÉ ES EL UMBRAL?<span class="kind k-ilu">EJEMPLO ILUSTRATIVO</span></p>
 <h2>Una línea sobre la probabilidad de malignidad</h2>
 <div id="ruler" class="ruler rv"></div>
+<div class="comite"><label for="uslide"><b>TÚ ERES EL COMITÉ</b> · arrastra el umbral</label><input type="range" id="uslide" min="2" max="98" value="50" aria-label="Umbral"><span id="ugoal">Reto: deja máximo <b>1</b> falso benigno con <b>5</b> falsas alarmas o menos.</span></div>
 <div class="row" style="align-items:center;gap:30px"><p class="rv"><span class="mid r" id="uimp">4</span> malignas del lado “benigno” <span class="mut">(falsos benignos)</span></p><p class="rv"><span class="mid g" id="ubio">1</span> benignas del lado “maligno” <span class="mut">(falsas alarmas)</span></p><p class="hint" id="uhint">→ BAJAR EL UMBRAL A 0,1</p></div>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Cada modelo estima P(maligno | rasgos) y se clasifica positivo si p ≥ umbral. Bajarlo sube la sensibilidad y baja la especificidad.</p></div><div><b>PARA TODOS</b><p>El umbral es desde cuánta sospecha el modelo da la alarma. Más bajo: detecta más malignos, pero da más falsas alarmas.</p></div></div>
 <p class="foot">Ejemplo ilustrativo: 24 células con probabilidades inventadas · los conteos reales vienen en las siguientes pantallas</p>
@@ -739,7 +819,7 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </div>
 <div class="dual rv">
 <div class="pn"><span class="lbl k">PARA EL CLÍNICO</span><p>Discriminación excelente en las cinco. Los IC se superponen: no se demostró diferencia (la prueba formal sería DeLong). Eso no prueba que sean equivalentes.</p></div>
-<div class="pn"><span class="lbl k">PARA TODOS</span><p>Si tomo una paciente con maligno y otra con benigno, en 99 de 100 parejas la máquina sospecha más de la correcta.</p></div>
+<div class="pn"><span class="lbl k">PARA TODOS</span><p>Si tomo al azar una paciente con tumor maligno y una con benigno, la máquina le da más sospecha a la maligna el 99% de las veces. Es una forma de leer el AUC, no un examen de 100 parejas.</p></div>
 </div>
 <p class="foot">Resultado del laboratorio · IC de Hanley y McNeil (1982), recortados en 1 · barra = intervalo · raya blanca = AUC</p>
 </section>
@@ -757,6 +837,15 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </div></div>
 <p class="foot">Zoom: ejes de 0 a 30% y de 70 a 100% · puntos reales del notebook; el trazo entre ellos es ilustrativo</p>
 </section>
+
+<section id="sc-q3" class="scr quizscr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-ok="1" data-good="¡Eso! Misma máquina, otro criterio: de 5 falsos benignos a 1, a cambio de 7 falsas alarmas más." data-bad="No: fue la misma máquina con las mismas variables. Lo que cambió fue el criterio: el umbral bajó de 0,5 a 0,1." data-mood="s" data-taunt="Yo voto por la C. Más variables, más lugares donde esconderme." data-note="Quiz 3. Respuesta B. Elegir máquina también importa (con 0,5: Cortadora 13, Escáner 5), pero dentro del Escáner el cambio de 5 a 1 viene del umbral.">
+<p class="eb"><span class="p">P8</span>QUIZ RELÁMPAGO<span class="kind k-lab">PREGUNTA AL PÚBLICO</span></p>
+<h2>Las AUC son parecidas. En el Escáner, ¿qué bajó los falsos benignos de 5 a 1?</h2>
+<div class="qopts"><button type="button" class="qopt" data-i="0"><b>A</b><span>Cambiar a otra máquina</span></button><button type="button" class="qopt" data-i="1"><b>B</b><span>Bajar el umbral de 0,5 a 0,1</span></button><button type="button" class="qopt" data-i="2"><b>C</b><span>Agregar más variables</span></button></div>
+<div class="pn qfb" aria-live="polite"><p>Toquen una respuesta (o usen las teclas 1, 2 y 3).</p></div>
+<p class="foot">Después de responder, ▶ sigue el recorrido</p>
+</section>
+
 
 <!-- 16 EMERGENCY -->
 <section id="sc-emerg" data-pmood="think" data-mood="w" data-taunt="¿Reunión de emergencia? Yo no estaba ahí. Tengo coartada: dije que era benigna." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-level="SALA DEL COMITÉ|5" data-sfx="alarm" data-say="Supongamos que no detectar un maligno pesa como 9 falsas alarmas. Entonces el umbral teórico es 0,1." data-note="Reunión de emergencia, en modo juego. El 9:1 es un supuesto ilustrativo, no un costo medido ni una decisión real del hospital. Si un falso negativo pesara como 9 falsos positivos y las probabilidades estuvieran calibradas, la regla de Bayes daría umbral 0,1. Aquí se motiva la pregunta 9.">
@@ -823,6 +912,24 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <p class="foot">Resultado del laboratorio · falsas alarmas = falsos positivos · igual cantidad de FN no implica que sea el mismo caso · precisión = VPP</p>
 </section>
 
+<section id="sc-calc" class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-pmood="explain" data-mood="w" data-taunt="¿Una calculadora? ¿Ahora cualquiera puede ver dónde me escondo?" data-note="Calculadora con las matrices reales del notebook (prueba de 171 casos, 64 malignos). Toca una máquina y un umbral. Úsala para responder preguntas del jurado en vivo: por ejemplo, LDA con 0,1 o kNN con 0,5.">
+<p class="eb"><span class="p">P6–P11</span>CALCULADORA DEL LABORATORIO<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
+<h2>Escoge máquina y criterio</h2>
+<div class="calc">
+<div class="cpick"><div class="cmach" role="group" aria-label="Máquina"></div>
+<div class="cth" role="group" aria-label="Umbral"><span class="lbl">UMBRAL</span><button type="button" class="cbt" data-th="0">0,5</button><button type="button" class="cbt" data-th="1">0,1</button></div>
+<div class="pn cexp"><span class="lbl k" id="cname"></span><p id="chow"></p></div></div>
+<div class="cout"><div class="cmat">
+<span></span><span class="ax">ERA MALIGNO</span><span class="ax">ERA BENIGNO</span>
+<span class="ax">DICE “MALIGNO”</span><div class="pn ok"><span class="lbl m">DESENMASCARADOS</span><b class="big m" id="cvp"></b></div><div class="pn cost"><span class="lbl g">FALSAS ALARMAS</span><b class="big g" id="cfp"></b></div>
+<span class="ax">DICE “BENIGNO”</span><div class="pn hot"><span class="lbl r">FALSOS BENIGNOS</span><b class="big r" id="cfn"></b></div><div class="pn ben"><span class="lbl l">BENIGNOS BIEN</span><b class="big l" id="cvn"></b></div>
+</div>
+<div class="cmet" id="cmet"></div></div>
+</div>
+<p class="foot">Resultado del laboratorio · matrices de confusión del notebook en los 171 casos de prueba · solo existen los umbrales 0,5 y 0,1 evaluados</p>
+</section>
+
+
 <!-- 21 VERDICT -->
 <section id="sc-verdict" data-mood="w" data-taunt="99% de VPN. Ese 1% soy yo… escondida y sudando frío." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-vpn="99.0" data-fn="1" data-sfx="ding" data-say="Al médico, en simple: de 64 malignos detecta 63. Con ↑ y ↓ cambio la prevalencia." data-note="Pregunta 11. Escáner (SVM) con umbral en 0,1. Las barras son los IC de Wilson. Con ↑ y ↓ cambia la prevalencia: 37%, 20%, 10%, 5% y 1%. El VPP cae mucho; el VPN sube. Misma máquina, distinto hospital.">
 <p class="eb"><span class="p">P11</span>VEREDICTO · ESCÁNER (SVM) CON UMBRAL EN 0,1<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
@@ -845,6 +952,15 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </div></div>
 <p class="foot">Resultado del laboratorio en este conjunto de prueba · IC de Wilson, barras en escala 80–100% · VPP y VPN recalculados con la sensibilidad y especificidad del Escáner · LR− = razón de verosimilitud negativa</p>
 </section>
+
+<section id="sc-q4" class="scr quizscr" data-room="5" data-lvl="SALA DEL COMITÉ" data-ok="1" data-good="¡Correcto! Sensibilidad = malignos desenmascarados / malignos reales = 63/64." data-bad="Ojo, no es eso. A se parece al VPN (97 de 98 “benignos” lo eran) y C sería la exactitud (93,6%). Sensibilidad = 63 de 64 malignos." data-mood="s" data-taunt="Escojan la A, que suena bonito y me deja tranquila." data-note="Quiz 4. Respuesta B. Es la confusión más común en la defensa: sensibilidad 98,4% (63/64) no es lo mismo que VPN 99,0% (97/98) ni que exactitud 93,6%.">
+<p class="eb"><span class="p">P11</span>QUIZ RELÁMPAGO<span class="kind k-lab">PREGUNTA AL PÚBLICO</span></p>
+<h2>Escáner con umbral 0,1: ¿qué significa 98,4% de sensibilidad?</h2>
+<div class="qopts"><button type="button" class="qopt" data-i="0"><b>A</b><span>De cada 100 “benignos”, 98 lo son</span></button><button type="button" class="qopt" data-i="1"><b>B</b><span>Desenmascara 63 de los 64 malignos</span></button><button type="button" class="qopt" data-i="2"><b>C</b><span>Acierta el 98% de todos los casos</span></button></div>
+<div class="pn qfb" aria-live="polite"><p>Toquen una respuesta (o usen las teclas 1, 2 y 3).</p></div>
+<p class="foot">Después de responder, ▶ sigue el recorrido</p>
+</section>
+
 
 <!-- 22 HUMAN -->
 <section id="sc-human" data-pmood="serious" class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Una falsa alarma cuesta días; un falso benigno puede costar etapa. Por eso movemos el criterio hacia el lado de no dejar pasar." data-note="Decirlo sereno. Un FN es una predicción del modelo, no una paciente enviada a casa: en la práctica hay triple evaluación. Las cifras de supervivencia son poblacionales de Estados Unidos y muestran la pendiente por etapa; no predicen un caso.">
@@ -1476,7 +1592,7 @@ function drawHosp(el,state){el.innerHTML=svgHosp(state)}
  const d=document.createElement('div');d.className='col rv';d.style.alignItems='center';d.style.gap='8px';
  d.innerHTML='<span class="lbl" style="font-size:17px;color:var(--ink)">'+r[0]+'</span>';
  const cv=document.createElement('canvas');cv.className='icon';cv.width=480;cv.height=480;cv.style.width='200px';cv.style.height='200px';cv.dataset.k=r[1];
- d.appendChild(cv);d.insertAdjacentHTML('beforeend','<span class="mid '+(r[1]>1?'r':'m')+'">'+r[1]+' de 100</span><span class="mut" style="font-size:19px">('+r[2]+')</span>');$('#icons').appendChild(d)});
+ d.appendChild(cv);d.insertAdjacentHTML('beforeend','<span class="mid '+(r[1]>1?'r':'m')+'">'+r[2]+'</span><span class="mut" style="font-size:16px">≈ '+r[1]+' de cada 100</span>');$('#icons').appendChild(d)});
 function drawIcon(cv,shown){const g=cv.getContext('2d'),k=+cv.dataset.k;g.clearRect(0,0,480,480);for(let i=0;i<100&&i<shown;i++){const x=(i%10)*48,y=Math.floor(i/10)*48;const im=i<k?((Math.floor((window.__fr||0)/14)+i)%2?IMG.m:IMG.m2):IMG.b;if(im.complete)g.drawImage(im,x,y-4,48,52)}}
 $$('canvas.icon').forEach(c=>drawIcon(c,100));
 
@@ -1737,6 +1853,56 @@ const MUSIC_MP3={"main": "data:audio/mpeg;base64,//tQxAAABkQRN1RhgAHqJiknGLAAAAF
  window.__fileMusicVol=function(){if(cur&&els[cur])try{els[cur].volume=vol()}catch(e){}};
  setInterval(()=>{if(want){const k=songMode==='tense'?'tense':'main';if(k!==cur)fadeTo(k)}},400);
  document.addEventListener('visibilitychange',()=>{if(document.hidden){Object.values(els).forEach(a=>a.pause())}else if(want&&cur){els[cur].play().catch(()=>{})}});
+})();
+
+/* ===== gamification: committee slider, lab calculator, lightning quiz ===== */
+(function(){
+ /* --- Tú eres el comité (ejemplo ilustrativo de 24 células) --- */
+ const sl=$('#uslide'),goal=$('#ugoal');let won=false;
+ if(sl){const base=umbralSet;
+  umbralSet=function(th){base(th);sl.value=Math.round(th*100);const imp=+$('#uimp').textContent,bio=+$('#ubio').textContent;
+   const ok=imp<=1&&bio<=5;sl.closest('.comite').classList.toggle('win',ok);
+   goal.innerHTML=ok?'¡Lo lograste! Con <b>'+th.toFixed(2).replace('.',',')+'</b> queda '+imp+' falso benigno y '+bio+' falsas alarmas. En el laboratorio, el 0,1 sale del supuesto de costo 9:1.'
+     :'Reto: deja máximo <b>1</b> falso benigno con <b>5</b> falsas alarmas o menos. Ahora: <b class="r">'+imp+'</b> falsos benignos · <b class="g">'+bio+'</b> falsas alarmas.';
+   if(ok&&!won){won=true;SFX.win()}if(!ok)won=false};
+  ['pointerdown','touchstart','click','keydown'].forEach(t=>sl.addEventListener(t,e=>e.stopPropagation()));
+  sl.addEventListener('input',()=>{ac();umbralSet(sl.value/100);if(+sl.value%4===0)SFX.blip()});
+  umbralSet(.5)}
+ /* --- Calculadora del laboratorio (matrices reales del notebook) --- */
+ const CM=[['La Balanza de odds','Logística',[[55,2,9,105],[61,10,3,97]],'Le da un peso a cada rasgo (eso es el odds ratio), los suma y convierte el total en una probabilidad. Es la más fácil de explicar.'],
+  ['La Clasificadora rápida','Naive Bayes',[[57,2,7,105],[60,8,4,99]],'Mira cada rasgo por separado, como si no tuvieran nada que ver entre sí, y multiplica. Es rapidísima, pero ingenua: aquí los rasgos sí se parecen entre ellos.'],
+  ['El Comparador de 13 vecinos','kNN',[[59,3,5,104],[63,22,1,85]],'Busca las 13 pacientes del entrenamiento más parecidas y cuenta cuántas eran malignas. Fácil de entender, pero con 0,1 dispara muchas alarmas.'],
+  ['La Cortadora recta','LDA',[[51,0,13,107],[61,9,3,98]],'Traza una línea recta entre los dos grupos, suponiendo que ambos tienen la misma forma. Con 0,5 nunca se equivoca al decir “maligno”, pero se le escapan 13.'],
+  ['El Escáner de margen','SVM',[[59,3,5,104],[63,10,1,97]],'Traza una frontera curva que deja el margen más ancho posible entre los dos grupos. Con 0,1 desenmascara 63 de 64 con 10 falsas alarmas.']];
+ const host=$('.cmach');let ci=4,ct=1;
+ if(host){CM.forEach((m,i)=>{const b=document.createElement('button');b.type='button';b.className='cmb';b.dataset.i=i;b.style.setProperty('--acc',MACC[i]);
+   b.innerHTML='<span class="cimg">'+sprHTML('k'+i+'0')+'</span><span class="cn">'+m[1]+'</span>';host.appendChild(b)});
+  const pct=(a,b)=>fmt(a/b*100,1,'%');
+  function render(){const m=CM[ci],[vp,fp,fn,vn]=m[2][ct],b=m[2][0];
+   $$('.cmb').forEach(x=>x.classList.toggle('on',+x.dataset.i===ci));$$('.cbt').forEach(x=>x.classList.toggle('on',+x.dataset.th===ct));
+   $('#cname').textContent=m[0].toUpperCase()+' · '+m[1];$('#chow').textContent=m[3];
+   const d=(v,o,good)=>ct&&v!==o?' <i class="'+((v<o)===good?'m':'g')+'">('+(v>o?'+':'−')+Math.abs(v-o)+')</i>':'';
+   $('#cvp').innerHTML=vp+d(vp,b[0],false);$('#cfp').innerHTML=fp+d(fp,b[1],true);$('#cfn').innerHTML=fn+d(fn,b[2],true);$('#cvn').innerHTML=vn+d(vn,b[3],false);
+   const per100=Math.round(fn/(fn+vn)*100);
+   $('#cmet').innerHTML=[['Sensibilidad',pct(vp,64),'desenmascara '+vp+' de los 64 malignos'],['Especificidad',pct(vn,107),'deja tranquilos '+vn+' de 107 benignos'],
+    ['VPN',pct(vn,vn+fn),'de sus '+(vn+fn)+' “benignos”, '+vn+' lo eran'],['VPP',pct(vp,vp+fp),'de sus '+(vp+fp)+' “malignos”, '+vp+' lo eran'],
+    ['Exactitud',pct(vp+vn,171),'aciertos totales (engaña sola)'],['Falsos benignos','≈ '+per100+' de 100','por cada 100 que llama “benigno”']]
+    .map(r=>'<div><b>'+r[0]+'</b><span class="v">'+r[1]+'</span><span class="w">'+r[2]+'</span></div>').join('')}
+  $$('.cmb,.cbt').forEach(b=>{['pointerdown','touchstart'].forEach(t=>b.addEventListener(t,e=>e.stopPropagation(),{passive:true}));
+   b.addEventListener('click',e=>{e.stopPropagation();ac();if(b.classList.contains('cmb'))ci=+b.dataset.i;else ct=+b.dataset.th;render();SFX.select()})});
+  render();RESET.calc=()=>{ci=4;ct=1;render()}}
+ /* --- Quiz relámpago --- */
+ $$('.quizscr').forEach(sec=>{const id=sec.id.slice(3),fb=sec.querySelector('.qfb'),ok=+sec.dataset.ok;let done=false;
+  function answer(i){if(done)return;done=true;const right=i===ok;
+   sec.querySelectorAll('.qopt').forEach(b=>{const k=+b.dataset.i;b.disabled=true;b.classList.toggle('right',k===ok);b.classList.toggle('wrong',k===i&&!right)});
+   fb.innerHTML='<p><b class="'+(right?'m':'r')+'">'+(right?'¡CORRECTO!':'¡NO ERA ESA!')+'</b> '+(right?sec.dataset.good:sec.dataset.bad)+'</p>';fb.classList.add(right?'ok':'hot');
+   if(right){SFX.coin();say(['¡Exacto! Desenmascarado.','¡Bien visto, detective!','Ese no se nos escapa.','¡Así se piensa!'][ok%4],false)}
+   else{SFX.hit();say(['Jeje, casi me salvo…','¡Sí! Confusión total, me encanta.','Sigan así y nadie me encuentra.'][i%3],true,'s')}}
+  sec.querySelectorAll('.qopt').forEach(b=>{['pointerdown','touchstart'].forEach(t=>b.addEventListener(t,e=>e.stopPropagation(),{passive:true}));
+   b.addEventListener('click',e=>{e.stopPropagation();ac();answer(+b.dataset.i)})});
+  sec.__answer=answer;
+  RESET[id]=()=>{done=false;fb.className='pn qfb';fb.innerHTML='<p>Toquen una respuesta (o usen las teclas 1, 2 y 3).</p>';sec.querySelectorAll('.qopt').forEach(b=>{b.disabled=false;b.classList.remove('right','wrong')})}});
+ addEventListener('keydown',e=>{const s=document.querySelector('.scr.on');if(!s||!s.__answer)return;const k='123'.indexOf(e.key);if(k>=0){e.preventDefault();s.__answer(k)}});
 })();
 
 /* ===== UI: toolbar for every device, audio panel, reading (flow) layout for small screens ===== */
