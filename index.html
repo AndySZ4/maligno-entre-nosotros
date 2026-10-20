@@ -454,7 +454,7 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <div class="col" style="flex:1;align-items:center;justify-content:center;text-align:center;gap:18px">
 <div class="row" style="align-items:center;gap:16px"><span id="ribbon" style="width:34px;height:44px;display:block"></span><p class="eb">OCTUBRE · DEFENSA FINAL · ANÁLISIS ESTADÍSTICO AVANZADO · LABORATORIO SEMANA 2</p></div>
 <h1 style="font-size:112px;line-height:.88">Hay un <span class="r">maligno</span><br>entre nosotros</h1>
-<p class="mut" style="font-size:27px">¿Cuánto podemos confiar en un “benigno”? · 569 punciones de mama · 5 máquinas</p>
+<p class="mut" style="font-size:27px">Misión: desenmascarar a los malignos disfrazados de “benigno” · 569 punciones de mama · 5 máquinas</p>
 <div class="row" style="align-items:flex-end;gap:28px"><div id="hero" style="width:132px;height:182px"></div><div id="lineup" class="lineup"></div></div>
 <p class="lbl">LA PATÓLOGA INVESTIGA: ¿CUÁL DE ELLAS ES EL IMPOSTOR?</p>
 <button class="start blink" id="startbtn" type="button">▶ PRESIONA START</button>
@@ -462,15 +462,15 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </section>
 
 <!-- 1 MAP -->
-<section id="sc-map" class="scr" data-room="-1" data-sfx="beep" data-say="Soy la patóloga de turno. Hoy hay un maligno entre nosotros: síganme sala por sala." data-note="El recorrido: cada sala es un nivel y los niveles siguen los bloques del laboratorio: datos, exploración, preparación, modelos, evaluación y recomendación.">
+<section id="sc-map" class="scr" data-room="-1" data-sfx="beep" data-say="Soy la patóloga de turno. Hay malignos disfrazados de benigno: vamos a ajustar el criterio para que no se nos escapen." data-note="El recorrido: cada sala es un nivel y los niveles siguen los bloques del laboratorio: datos, exploración, preparación, modelos, evaluación y recomendación.">
 <p class="eb"><span class="p ctx">RUTA</span>EL RECORRIDO DEL CASO</p>
 <h2>Siete salas, once preguntas del laboratorio</h2>
 <div class="mapwrap" id="mapA" style="width:900px;height:506px"></div>
-<p class="foot">Cada sala muestra las preguntas del laboratorio que resuelve</p>
+<p class="foot">El arco del caso: ① ver cuántos malignos se disfrazan de “benigno” · ② entender cómo decide cada máquina · ③ ajustar el criterio (el umbral) para desenmascararlos</p>
 </section>
 
 <!-- 2 SALA -->
-<section id="sc-sala" data-mood="s" data-taunt="171 en la sala y nadie sospecha de mí. Me encanta este hospital." class="scr" data-room="0" data-lvl="SALA DE ESPERA" data-level="SALA DE ESPERA|0" data-fn="13" data-say="171 punciones; 64 son malignas. ¿Cuántas detecta el modelo?" data-note="El gancho. Deja que vean parpadear los 13 tumores malignos que el modelo no detecta antes de hablar de estadística. Los impostores son los tumores, no las pacientes. Es LDA con umbral 0,5. Es una predicción del modelo, no una decisión médica: en la práctica la clínica y la imagen siguen contando.">
+<section id="sc-sala" data-mood="s" data-taunt="171 en la sala y nadie sospecha de mí. Me encanta este hospital." class="scr" data-room="0" data-lvl="SALA DE ESPERA" data-level="SALA DE ESPERA|0" data-fn="13" data-say="171 punciones; 64 son malignas. ¿Cuántas se disfrazan de benigno?" data-note="El gancho. Deja que vean parpadear los 13 tumores malignos que el modelo no detecta antes de hablar de estadística. Los impostores son los tumores, no las pacientes. Es LDA con umbral 0,5. Es una predicción del modelo, no una decisión médica: en la práctica la clínica y la imagen siguen contando.">
 <p class="eb"><span class="p">P1</span>LA SALA DE ESPERA<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2>171 mujeres esperan el resultado de su punción</h2>
 <div class="row" style="flex:1;align-items:center">
@@ -478,21 +478,21 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <div class="col" style="flex:1;gap:16px">
 <p class="rv"><span class="r mid" data-to="64">64</span> tienen un tumor maligno</p>
 <p class="rv">La Cortadora recta (LDA) encuentra <b class="mid">51</b></p>
-<p class="rv"><span class="mid r blink">13</span> tumores malignos quedan sin detectar por el modelo</p>
-<p class="rv mut" style="font-size:20px">Gris: 107 con tumor benigno · parpadean: malignos no detectados</p>
+<p class="rv"><span class="mid r blink">13</span> malignos disfrazados de “benigno”: <b class="r">falsos benignos</b></p>
+<p class="rv mut" style="font-size:20px">Gris: 107 con tumor benigno · parpadean: falsos benignos</p>
 </div></div>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Prevalencia en la prueba: 64/171 = 37,4%. Con LDA y umbral 0,5 hay 13 falsos negativos: sensibilidad 79,7%.</p></div><div><b>PARA TODOS</b><p>De 64 mujeres con un tumor maligno, en 13 el modelo diría “benigno”.</p></div></div>
 <p class="foot">Conjunto de prueba real del laboratorio · LDA con umbral 0,5 · LDA = análisis discriminante lineal</p>
 </section>
 
 <!-- 3 BOSS -->
-<section id="sc-boss" data-pmood="surprised" data-mood="s" data-taunt="62,7% de exactitud y cero detectados. Yo a eso le llamo eficiencia." data-save="El Sello «Todo Benigno» tiene 62,7% de exactitud y no detecta ningún maligno.|La exactitud sola engaña cuando hay más benignos que malignos.|La pregunta real: cuántos malignos quedan sin detectar." class="scr" data-room="0" data-lvl="SALA DE ESPERA" data-vpn="62.7" data-fn="212" data-sfx="boss" data-say="Ojo: 62,7% de exactitud suena bien, pero no encuentra ni un maligno." data-note="Pregunta 1. El modelo trivial dice benigno a todo: 62,7% de exactitud y 0% de sensibilidad. Lo llamamos el Sello «Todo Benigno»: estampa “benigno” en todo y no detecta ninguno de los 212 malignos. Ojo: es un detector perezoso, no un impostor; los impostores son los tumores.">
+<section id="sc-boss" data-pmood="surprised" data-mood="s" data-taunt="62,7% de exactitud y cero detectados. Yo a eso le llamo eficiencia." data-save="El Sello «Todo Benigno» tiene 62,7% de exactitud y no detecta ningún maligno.|La exactitud sola engaña cuando hay más benignos que malignos.|La pregunta real: cuántos falsos benignos se nos cuelan." class="scr" data-room="0" data-lvl="SALA DE ESPERA" data-vpn="62.7" data-fn="212" data-sfx="boss" data-say="Ojo: 62,7% de exactitud suena bien, pero no encuentra ni un maligno." data-note="Pregunta 1. El modelo trivial dice benigno a todo: 62,7% de exactitud y 0% de sensibilidad. Lo llamamos el Sello «Todo Benigno»: estampa “benigno” en todo y no detecta ninguno de los 212 malignos. Ojo: es un detector perezoso, no un impostor; los impostores son los tumores.">
 <p class="eb" style="justify-content:center"><span class="p">P1</span>¡APARECE EL SELLO «TODO BENIGNO»!<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2 style="text-align:center;font-size:64px">El modelo que dice “benigno” a todo</h2>
 <div class="row" style="align-items:center;justify-content:space-between;flex:1">
 <div class="col rv" style="width:340px"><span class="lbl">EXACTITUD</span><span class="big k" data-to="62.7" data-dec="1" data-suf="%">62,7%</span><p>Parece confiable: acierta los 357 benignos</p></div>
 <div id="boss" class="bossBox" style="width:300px;height:330px"></div>
-<div class="col rv" style="width:340px;text-align:right"><span class="lbl">SENSIBILIDAD</span><span class="big r">0%</span><p>No detecta ninguno de los 212 malignos</p></div>
+<div class="col rv" style="width:340px;text-align:right"><span class="lbl">SENSIBILIDAD</span><span class="big r">0%</span><p>Los 212 malignos pasan como “benignos”</p></div>
 </div>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Clasificador trivial: exactitud = proporción de benignos (62,7%) y sensibilidad 0%. La exactitud engaña con clases desbalanceadas.</p></div><div><b>PARA TODOS</b><p>Decir “benigno” a todas acierta 6 de cada 10 veces… y no encuentra ni un cáncer.</p></div></div>
 <p class="foot">Resultado del laboratorio · línea base sobre los 569 casos · VPN = de los casos que el modelo llama “benigno”, cuántos lo son: 62,7%</p>
@@ -691,7 +691,7 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <div class="pn ok"><span class="lbl m">VP · DETECTADAS</span><span class="big m" data-to="59">59</span><p>dice “maligno” y era maligno</p></div>
 <div class="pn cost"><span class="lbl g">FP · FALSAS ALARMAS</span><span class="big g" data-to="3">3</span><p>dice “maligno” y era benigno</p></div>
 <span class="ax">LA MÁQUINA DIJO “BENIGNO”</span>
-<div class="pn hot"><span class="lbl r">FN · SIN DETECTAR</span><span class="big r" data-to="5">5</span><p>dice “benigno” y era maligno</p></div>
+<div class="pn hot"><span class="lbl r">FN · FALSOS BENIGNOS</span><span class="big r" data-to="5">5</span><p>dice “benigno” y era maligno</p></div>
 <div class="pn ben"><span class="lbl l">VN · BENIGNOS BIEN</span><span class="big l" data-to="104">104</span><p>dice “benigno” y era benigno</p></div>
 </div>
 <div class="tbl spot rv" style="grid-template-columns:150px 250px 1fr;font-size:19px;gap:10px 14px;flex:1;align-content:center">
@@ -706,27 +706,27 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </section>
 
 <!-- UMBRAL -->
-<section id="sc-umbral" class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-steps="1" data-pmood="think" data-mood="w" data-taunt="¿Una línea que decide si soy sospechosa? Esto es discriminación." data-say="Cada célula recibe una probabilidad. El umbral es la línea desde la que el modelo dice maligno." data-note="Concepto clave antes de las oleadas. Dibujo con 24 células y probabilidades inventadas. Con umbral 0,5 quedan 4 malignas del lado benigno y 1 benigna del lado maligno. Presiona → y el umbral baja a 0,1: queda 1 maligna escondida y 7 benignas reciben una falsa alarma. Es el mismo intercambio que verán con los datos reales.">
+<section id="sc-umbral" class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-steps="1" data-pmood="think" data-mood="w" data-taunt="¿Una línea que decide si soy sospechosa? Esto es discriminación." data-say="Cada célula recibe una probabilidad. El umbral es el criterio: bajarlo es nuestra herramienta para desenmascarar a los disfrazados." data-note="Concepto clave antes de las oleadas. Dibujo con 24 células y probabilidades inventadas. Con umbral 0,5 quedan 4 malignas del lado benigno y 1 benigna del lado maligno. Presiona → y el umbral baja a 0,1: queda 1 maligna escondida y 7 benignas reciben una falsa alarma. Es el mismo intercambio que verán con los datos reales.">
 <p class="eb"><span class="p">P6–P9</span>¿QUÉ ES EL UMBRAL?<span class="kind k-ilu">EJEMPLO ILUSTRATIVO</span></p>
 <h2>Una línea sobre la probabilidad de malignidad</h2>
 <div id="ruler" class="ruler rv"></div>
-<div class="row" style="align-items:center;gap:30px"><p class="rv"><span class="mid r" id="uimp">4</span> malignas del lado “benigno” <span class="mut">(impostoras)</span></p><p class="rv"><span class="mid g" id="ubio">1</span> benignas del lado “maligno” <span class="mut">(falsas alarmas)</span></p><p class="hint" id="uhint">→ BAJAR EL UMBRAL A 0,1</p></div>
+<div class="row" style="align-items:center;gap:30px"><p class="rv"><span class="mid r" id="uimp">4</span> malignas del lado “benigno” <span class="mut">(falsos benignos)</span></p><p class="rv"><span class="mid g" id="ubio">1</span> benignas del lado “maligno” <span class="mut">(falsas alarmas)</span></p><p class="hint" id="uhint">→ BAJAR EL UMBRAL A 0,1</p></div>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Cada modelo estima P(maligno | rasgos) y se clasifica positivo si p ≥ umbral. Bajarlo sube la sensibilidad y baja la especificidad.</p></div><div><b>PARA TODOS</b><p>El umbral es desde cuánta sospecha el modelo da la alarma. Más bajo: detecta más malignos, pero da más falsas alarmas.</p></div></div>
 <p class="foot">Ejemplo ilustrativo: 24 células con probabilidades inventadas · los conteos reales vienen en las siguientes pantallas</p>
 </section>
 
 <!-- 14 WAVE 1 -->
-<section id="sc-wave1" data-pmood="surprised" data-mood="s" data-taunt="La Cortadora en 0,5 es mi favorita: trece de nosotras salimos libres." class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-steps="1" data-say="Primero miren la exactitud. Luego presiono la flecha y miramos los malignos sin detectar." data-note="Preguntas 6 y 7. La tabla empieza con la exactitud: todas entre 92% y 95%. Presiona → y se reordena por malignos sin detectar: de 5 a 13. LDA tiene 100% de precisión a 0,5: dice “maligno” 51 veces y acierta las 51, pero deja 13 sin detectar.">
+<section id="sc-wave1" data-pmood="surprised" data-mood="s" data-taunt="La Cortadora en 0,5 es mi favorita: trece de nosotras salimos libres." class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-steps="1" data-say="Primero miren la exactitud. Luego presiono la flecha y miramos los falsos benignos." data-note="Preguntas 6 y 7. La tabla empieza con la exactitud: todas entre 92% y 95%. Presiona → y se reordena por falsos benignos: de 5 a 13. LDA tiene 100% de precisión a 0,5: dice “maligno” 51 veces y acierta las 51, pero deja pasar 13 falsos benignos.">
 <p class="eb"><span class="p">P6–P7</span>OLEADA 1 · UMBRAL EN 0,5<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
-<h2>La exactitud se parece; los malignos sin detectar, no</h2>
+<h2>La exactitud se parece; los falsos benignos, no</h2>
 <div style="position:relative;width:1168px;height:150px"><canvas id="belt1" width="2336" height="300" style="width:1168px;height:150px"></canvas><span class="tag" id="beltm" style="left:560px;top:122px">LA CORTADORA (LDA)</span><span class="tag" style="left:978px;top:6px;color:var(--hitT);border-color:var(--hit)">“MALIGNO” · ALARMA</span><span class="tag" style="left:978px;top:118px;color:var(--benT);border-color:var(--ben)">“BENIGNO” · SIN ALARMA</span></div>
-<div class="dyn" id="w1" style="height:208px"><p class="hint" id="w1hint" style="position:absolute;left:0;top:-24px;z-index:3">→ REORDENAR POR MALIGNOS SIN DETECTAR</p></div>
+<div class="dyn" id="w1" style="height:208px"><p class="hint" id="w1hint" style="position:absolute;left:0;top:-24px;z-index:3">→ REORDENAR POR FALSOS BENIGNOS</p></div>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>A umbral 0,5 la exactitud apenas cambia (92,4–95,3%), pero la sensibilidad va de 79,7% (LDA) a 92,2%. El 100% de precisión de LDA cuesta 13 FN.</p></div><div><b>PARA TODOS</b><p>Todas aciertan casi lo mismo en total, pero unas dejan escapar muchos más cánceres que otras.</p></div></div>
 <p class="foot">Resultado del laboratorio · prueba: 171 tumores, 64 malignos · la animación es ilustrativa; los conteos son los del notebook</p>
 </section>
 
 <!-- 15 AUC -->
-<section id="sc-auc" data-pmood="think" data-mood="s" data-taunt="Todas ordenan parecido. Mientras nadie toque el umbral, yo tranquila." class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-save="Las cinco máquinas tienen AUC similares: de 0,986 a 0,992.|Con el umbral en 0,5 quedan sin detectar de 5 a 13 malignos.|El umbral cambia mucho el resultado, y el modelo también cuenta." data-say="Todas ordenan parecido. Pero dónde cortan cambia mucho el resultado." data-note="Pregunta 8. Las barras muestran el intervalo de confianza de cada AUC: se enciman por completo. Usa la columna clínico para el estadístico y la de todos para el público general.">
+<section id="sc-auc" data-pmood="think" data-mood="s" data-taunt="Todas ordenan parecido. Mientras nadie toque el umbral, yo tranquila." class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-save="Las cinco máquinas tienen AUC similares: de 0,986 a 0,992.|Con el umbral en 0,5 se cuelan de 5 a 13 falsos benignos.|El criterio (umbral) cambia mucho cuántos se cuelan; la máquina también cuenta." data-say="Todas ordenan parecido. Pero dónde cortan cambia mucho el resultado." data-note="Pregunta 8. Las barras muestran el intervalo de confianza de cada AUC: se enciman por completo. Usa la columna clínico para el estadístico y la de todos para el público general.">
 <p class="eb"><span class="p">P8</span>ORDENAR BIEN NO ES CORTAR BIEN<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2>AUC parecidas, decisiones distintas</h2>
 <div class="tbl spot rv" style="grid-template-columns:260px 1fr 90px 130px">
@@ -761,7 +761,7 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <!-- 16 EMERGENCY -->
 <section id="sc-emerg" data-pmood="think" data-mood="w" data-taunt="¿Reunión de emergencia? Yo no estaba ahí. Tengo coartada: dije que era benigna." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-level="SALA DEL COMITÉ|5" data-sfx="alarm" data-say="Supongamos que no detectar un maligno pesa como 9 falsas alarmas. Entonces el umbral teórico es 0,1." data-note="Reunión de emergencia, en modo juego. El 9:1 es un supuesto ilustrativo, no un costo medido ni una decisión real del hospital. Si un falso negativo pesara como 9 falsos positivos y las probabilidades estuvieran calibradas, la regla de Bayes daría umbral 0,1. Aquí se motiva la pregunta 9.">
 <p class="eb"><span class="p">P9</span>¡REUNIÓN DE EMERGENCIA!<span class="kind k-sup">SUPUESTO ILUSTRATIVO</span></p>
-<h2>¿Cuánto cuesta dejar pasar a un impostor?</h2>
+<h2>¿Cuánto cuesta dejar pasar un falso benigno?</h2>
 <div id="committee" class="rv" style="width:1168px;height:200px;flex:none"></div>
 <div class="pn rv" style="align-items:center"><span class="lbl">SUPUESTO ILUSTRATIVO: UN FN PESA COMO <b class="r" id="ratio">9</b> FP</span>
 <p style="font-size:32px">umbral = C(FP) / (C(FP) + C(FN)) = 1 / (1 + <b class="r" id="ratio2">9</b>) = <b class="k" id="thr">0,10</b></p>
@@ -773,50 +773,50 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <!-- 17 UMBRAL TABLE -->
 <section id="sc-dial" data-pmood="think" data-mood="p" data-taunt="¡¿Por qué bajan el umbral?! ¡Eso no estaba en el contrato!" class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-steps="1" data-say="Bajo el umbral y miren cómo cambian los números." data-note="Pregunta 9. La tabla empieza con el umbral en 0,5. Presiona → y baja a 0,1: los FN bajan en verde y los FP suben en ámbar. Sube la sensibilidad y baja la precisión. La exactitud apenas se mueve y no siempre en la misma dirección: logística 93,6 → 92,4%, LDA 92,4 → 93,0%, SVM 95,3 → 93,6%. Usa ↓ para el reflector por fila.">
 <p class="eb"><span class="p">P9</span>EL UMBRAL EN LA TABLA<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
-<h2>Bajar el umbral: menos sin detectar, más falsas alarmas</h2>
+<h2>Bajar el umbral: menos falsos benignos, más falsas alarmas</h2>
 <div class="row" style="align-items:center;gap:24px"><span class="lbl">UMBRAL</span><span class="big k" id="dialv">0,5</span>
 <div style="flex:1;position:relative;height:36px"><div style="position:absolute;left:0;right:0;top:14px;height:8px;background:var(--dim)"></div><div id="dknob" style="position:absolute;top:0;width:20px;height:36px;background:var(--rib);left:calc(50% - 10px);transition:left 1.2s cubic-bezier(.4,0,.2,1)"></div></div></div>
 <div class="tbl spot" id="dial" style="grid-template-columns:270px 1fr 1fr 1fr 1fr 1fr;font-size:22px"></div>
 <p class="hint" id="dialhint">→ BAJAR EL UMBRAL A 0,1</p>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Al bajar el umbral sube la sensibilidad y bajan la especificidad y el VPP: es un intercambio, no una mejora gratis.</p></div><div><b>PARA TODOS</b><p>Bajar el umbral detecta más cánceres, pero da más falsas alarmas en casos benignos.</p></div></div>
-<p class="foot">Resultado del laboratorio · matrices de confusión del notebook · FN = malignos sin detectar · FP = falsas alarmas · precisión = VPP</p>
+<p class="foot">Resultado del laboratorio · matrices de confusión del notebook · FN = falsos benignos · FP = falsas alarmas · precisión = VPP</p>
 </section>
 
 <!-- 18 WAVE 2 -->
 <section id="sc-wave2" data-mood="w" data-taunt="Veintidós falsas alarmas para atraparme… por lo menos les salgo cara." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Mismo beneficio en algunas, distinto precio." data-note="Pregunta 9. Lo que gano en verde, lo que pago en ámbar. El Escáner y el Comparador detectan 4 malignos más cada uno, pero el Comparador suma 19 falsas alarmas y el Escáner, 7.">
 <p class="eb"><span class="p">P9</span>OLEADA 2 · DE 0,5 A 0,1<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2>Lo que gano y lo que pago con cada máquina</h2>
-<div class="row" style="font-family:var(--f-lab);font-size:15px;padding-left:250px"><span class="m" style="flex:1;text-align:right;padding-right:16px">MALIGNOS DETECTADOS DE MÁS ◀</span><span class="g" style="flex:1;padding-left:16px">▶ FALSAS ALARMAS DE MÁS</span></div>
+<div class="row" style="font-family:var(--f-lab);font-size:15px;padding-left:250px"><span class="m" style="flex:1;text-align:right;padding-right:16px">FALSOS BENIGNOS DESENMASCARADOS ◀</span><span class="g" style="flex:1;padding-left:16px">▶ FALSAS ALARMAS DE MÁS</span></div>
 <div class="bf spot" id="bf"></div>
-<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Costo marginal (FP extra por cada FN evitado): LDA 0,9 · Log. 1,3 · SVM 1,75 · NB 2,0 · kNN 4,75.</p></div><div><b>PARA TODOS</b><p>Escáner y Comparador detectan 4 malignos más cada uno, pero el Comparador suma 19 falsas alarmas; el Escáner, 7.</p></div></div>
+<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Costo marginal (FP extra por cada FN evitado): LDA 0,9 · Log. 1,3 · SVM 1,75 · NB 2,0 · kNN 4,75.</p></div><div><b>PARA TODOS</b><p>Escáner y Comparador desenmascaran 4 falsos benignos cada uno, pero el Comparador suma 19 falsas alarmas; el Escáner, 7.</p></div></div>
 <p class="foot">Resultado del laboratorio · cambios en FN y FP entre umbral 0,5 y 0,1 · matrices de confusión del notebook</p>
 </section>
 
 <!-- 19 DOTS -->
-<section id="sc-dots" data-mood="p" data-taunt="¿De cinco quedamos UNA? ¿Dónde están mis amigas?" class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-vpn="99.0" data-fn="1" data-say="Con el Escáner, al bajar el umbral, los malignos sin detectar pasan de 5 a 1." data-note="La misma sala con el Escáner (SVM). La animación alterna el umbral entre 0,5 y 0,1: los malignos sin detectar bajan de 5 a 1 y las falsas alarmas suben de 3 a 10. Cada figura es una paciente; lo que parpadea es su tumor no detectado, no ella.">
+<section id="sc-dots" data-mood="p" data-taunt="¿De cinco quedamos UNA? ¿Dónde están mis amigas?" class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-vpn="99.0" data-fn="1" data-say="Con el Escáner, al bajar el umbral, los falsos benignos pasan de 5 a 1." data-note="La misma sala con el Escáner (SVM). La animación alterna el umbral entre 0,5 y 0,1: los falsos benignos bajan de 5 a 1 y las falsas alarmas suben de 3 a 10. Cada figura es una paciente; lo que parpadea es su tumor no detectado, no ella.">
 <p class="eb"><span class="p">P9</span>LA SALA CON EL ESCÁNER (SVM)<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2>La sala de espera, con el umbral en 0,5 y en 0,1</h2>
 <div class="row" style="flex:1;align-items:center">
 <canvas id="dots" width="1400" height="774" style="width:700px;height:387px"></canvas>
 <div class="col" style="flex:1;gap:14px">
 <span class="lbl">UMBRAL</span><span class="big k" id="dthr">0,5</span>
-<p><span class="mid r" id="dfn">5</span> malignos sin detectar</p>
+<p><span class="mid r" id="dfn">5</span> falsos benignos</p>
 <p><span class="mid g" id="dfp">3</span> falsas alarmas</p>
-<p class="mut" style="font-size:19px">Rojo: maligno detectado · parpadea: maligno sin detectar · ámbar: falsa alarma · gris: benigno</p>
+<p class="mut" style="font-size:19px">Rojo: maligno detectado · parpadea: falso benigno · ámbar: falsa alarma · gris: benigno</p>
 </div></div>
 <p class="foot">Resultado del laboratorio · SVM en los 171 tumores de prueba</p>
 </section>
 
 <!-- 20 TIE -->
-<section id="sc-tie" data-mood="w" data-taunt="Voto por el Comparador: caro, lento y me cae demasiado bien." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Empate en malignos sin detectar: gana quien da menos falsas alarmas." data-note="Pregunta 10. Empate en cantidad: cada máquina deja 1 maligno sin detectar. No comprobamos si es el mismo caso; para eso habría que comparar las predicciones individuales. Se desempata por las falsas alarmas: el Escáner da 12 menos. El Comparador es más fácil de explicar, pero sale caro.">
+<section id="sc-tie" data-mood="w" data-taunt="Voto por el Comparador: caro, lento y me cae demasiado bien." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Empate en falsos benignos: gana quien da menos falsas alarmas." data-note="Pregunta 10. Empate en cantidad: cada máquina deja pasar 1 falso benigno. No comprobamos si es el mismo caso; para eso habría que comparar las predicciones individuales. Se desempata por las falsas alarmas: el Escáner da 12 menos. El Comparador es más fácil de explicar, pero sale caro.">
 <p class="eb"><span class="p">P10</span>DESEMPATE · UMBRAL EN 0,1<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
-<h2>Comparador contra Escáner: un maligno sin detectar cada uno</h2>
+<h2>Comparador contra Escáner: un falso benigno cada uno</h2>
 <div class="row" style="flex:1;align-items:stretch">
 <div class="pn rv" style="flex:1"><span class="lbl">COMPARADOR DE 13 VECINOS · kNN</span>
-<div class="tbl" style="grid-template-columns:1fr auto;font-size:24px"><span>Malignos sin detectar</span><span class="mid num">1</span><span>Falsas alarmas</span><span class="mid num g">22</span><span>Precisión</span><span class="mid num">74,1%</span><span>Exactitud</span><span class="mid num">86,5%</span></div>
+<div class="tbl" style="grid-template-columns:1fr auto;font-size:24px"><span>Falsos benignos</span><span class="mid num">1</span><span>Falsas alarmas</span><span class="mid num g">22</span><span>Precisión</span><span class="mid num">74,1%</span><span>Exactitud</span><span class="mid num">86,5%</span></div>
 <p class="mut" style="font-size:20px">Fácil de explicar: “se parece a 13 casos conocidos”</p></div>
 <div class="pn svm rv" style="flex:1"><span class="lbl b">ESCÁNER DE MARGEN · SVM</span>
-<div class="tbl" style="grid-template-columns:1fr auto;font-size:24px"><span>Malignos sin detectar</span><span class="mid num">1</span><span>Falsas alarmas</span><span class="mid num g">10</span><span>Precisión</span><span class="mid num">86,3%</span><span>Exactitud</span><span class="mid num">93,6%</span></div>
+<div class="tbl" style="grid-template-columns:1fr auto;font-size:24px"><span>Falsos benignos</span><span class="mid num">1</span><span>Falsas alarmas</span><span class="mid num g">10</span><span>Precisión</span><span class="mid num">86,3%</span><span>Exactitud</span><span class="mid num">93,6%</span></div>
 <p class="mut" style="font-size:20px">Más difícil de explicar, pero <b class="g">12 falsas alarmas menos</b></p></div>
 </div>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>A igual sensibilidad (98,4%), se prefiere la mayor especificidad: SVM 90,7% contra kNN 79,4%.</p></div><div><b>PARA TODOS</b><p>Si los dos detectan la misma cantidad de cánceres, gana el que da menos falsas alarmas.</p></div></div>
@@ -847,11 +847,11 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </section>
 
 <!-- 22 HUMAN -->
-<section id="sc-human" data-pmood="serious" class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Una falsa alarma cuesta días; un maligno sin detectar puede costar etapa." data-note="Decirlo sereno. Un FN es una predicción del modelo, no una paciente enviada a casa: en la práctica hay triple evaluación. Las cifras de supervivencia son poblacionales de Estados Unidos y muestran la pendiente por etapa; no predicen un caso.">
+<section id="sc-human" data-pmood="serious" class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Una falsa alarma cuesta días; un falso benigno puede costar etapa. Por eso movemos el criterio hacia el lado de no dejar pasar." data-note="Decirlo sereno. Un FN es una predicción del modelo, no una paciente enviada a casa: en la práctica hay triple evaluación. Las cifras de supervivencia son poblacionales de Estados Unidos y muestran la pendiente por etapa; no predicen un caso.">
 <p class="eb"><span class="p ctx">CLÍNICA</span>LECTURA HUMANA<span class="kind k-med">CONTEXTO MÉDICO</span></p>
-<h2>Detrás de cada impostor hay una paciente</h2>
+<h2>Detrás de cada falso benigno hay una paciente</h2>
 <div class="row" style="flex:1">
-<div class="pn hot rv" style="flex:1.25"><span class="lbl r">FALSO NEGATIVO · EL MODELO NO LO DETECTA</span><p>Si además la clínica y la imagen no lo señalan, el diagnóstico puede retrasarse y el tumor avanzar de etapa.</p>
+<div class="pn hot rv" style="flex:1.25"><span class="lbl r">FALSO NEGATIVO · FALSO BENIGNO</span><p>Si además la clínica y la imagen no lo señalan, el diagnóstico puede retrasarse y el tumor avanzar de etapa.</p>
 <span class="lbl" style="margin-top:6px">SUPERVIVENCIA RELATIVA A 5 AÑOS</span>
 <div class="tbl" style="grid-template-columns:150px 1fr 90px">
 <span>localizado</span><div class="blk" data-n="10" style="--c:var(--ok)"></div><span class="num">&gt;99%</span>
@@ -865,16 +865,16 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </section>
 
 <!-- 23 ICONS -->
-<section id="sc-icons" data-mood="p" data-taunt="¡Una de cada cien! Ya no cabemos en el escondite." data-save="Con un costo supuesto de 9:1, el umbral teórico es 0,1.|Con 0,1, el Escáner detecta 63 de 64 malignos (98,4%) y da 7 falsas alarmas más que con 0,5.|De sus “benignos”, 97 de 98 lo eran: VPN 99,0%." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Dos cambios, por separado: primero la máquina, después el umbral." data-note="Frecuencias naturales: de cada 100 casos que el modelo llama benigno, cuántos eran malignos (1 − VPN). Se separan los dos efectos. Paso 1, cambia la máquina con el umbral fijo en 0,5: Cortadora 11, Balanza 8, Escáner 5. Paso 2, el Escáner baja el umbral a 0,1: de 5 a 1. Ojo: vale para esta prueba, con 37% de malignos; con otra prevalencia los números cambian (ver la pantalla del veredicto).">
+<section id="sc-icons" data-mood="p" data-taunt="¡Una de cada cien! Ya no cabemos en el escondite." data-save="Con un costo supuesto de 9:1, el umbral teórico es 0,1.|Con 0,1, el Escáner desenmascara 63 de 64 malignos (98,4%) a cambio de 7 falsas alarmas más que con 0,5.|De sus “benignos”, 97 de 98 lo eran: VPN 99,0%." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Dos cambios, por separado: primero la máquina, después el umbral." data-note="Frecuencias naturales: de cada 100 casos que el modelo llama benigno, cuántos eran malignos (1 − VPN). Se separan los dos efectos. Paso 1, cambia la máquina con el umbral fijo en 0,5: Cortadora 11, Balanza 8, Escáner 5. Paso 2, el Escáner baja el umbral a 0,1: de 5 a 1. Ojo: vale para esta prueba, con 37% de malignos; con otra prevalencia los números cambian (ver la pantalla del veredicto).">
 <p class="eb"><span class="p">P11</span>DE CADA 100 “BENIGNOS”<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
-<h2>¿Cuántos “benignos” eran impostores?</h2>
+<h2>¿Cuántos “benignos” eran malignos disfrazados?</h2>
 <div class="icwrap"><div class="icgrp g1"><span class="ich">① CAMBIA LA MÁQUINA · UMBRAL FIJO EN 0,5</span></div><div class="icgrp g2"><span class="ich">② EL ESCÁNER BAJA EL UMBRAL</span></div><div class="row" id="icons" style="justify-content:space-between;align-items:flex-start"></div></div><p class="prevnote rv">Con <b>37% de malignos</b>, como en esta prueba. Si hay menos malignos en la población, estas cifras bajan; si hay más, suben.</p>
-<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>1 − VPN. Máquina (umbral 0,5): LDA 10,8% → Log. 7,9% → SVM 4,6%. Umbral en SVM: 4,6% → 1,0%.</p></div><div><b>PARA TODOS</b><p>Cambiar de máquina baja de 11 a 5 los malignos escondidos; bajar el umbral del Escáner, de 5 a 1.</p></div></div>
+<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>1 − VPN. Máquina (umbral 0,5): LDA 10,8% → Log. 7,9% → SVM 4,6%. Umbral en SVM: 4,6% → 1,0%.</p></div><div><b>PARA TODOS</b><p>Cambiar de máquina baja de 11 a 5 los falsos benignos por cada 100 “benignos”; ajustar el criterio del Escáner, de 5 a 1.</p></div></div>
 <p class="foot">Resultado del laboratorio · FN / (FN + VN) redondeado a 100 · conjunto de prueba, prevalencia de 37%</p>
 </section>
 
 <!-- 24 TRIAGE -->
-<section id="sc-triage" data-mood="p" data-taunt="¿Zona de sospecha y segunda prueba? Esto ya es acoso." class="scr" data-room="6" data-lvl="DIRECCIÓN" data-level="DIRECCIÓN DEL HOSPITAL|6" data-say="La duda se concentra en 11 casos: ahí va la segunda prueba." data-note="Propuesta hipotética, construida con resultados del laboratorio. De dos umbrales a tres zonas. La segunda prueba se concentra donde está la duda: 11 de 171 casos, y ahí aparecen 4 de los 5 malignos que el umbral en 0,5 dejaba pasar.">
+<section id="sc-triage" data-mood="p" data-taunt="¿Zona de sospecha y segunda prueba? Esto ya es acoso." class="scr" data-room="6" data-lvl="DIRECCIÓN" data-level="DIRECCIÓN DEL HOSPITAL|6" data-say="Los disfrazados se esconden en la zona gris: 11 casos con 4 de los 5 falsos benignos. Ahí va la segunda prueba." data-note="Propuesta hipotética, construida con resultados del laboratorio. De dos umbrales a tres zonas. La segunda prueba se concentra donde está la duda: 11 de 171 casos, y ahí aparecen 4 de los 5 malignos que el umbral en 0,5 dejaba pasar.">
 <p class="eb"><span class="p">P11</span>DE DOS UMBRALES A TRES ZONAS<span class="kind k-mix">LABORATORIO + PROPUESTA</span></p>
 <h2>Una zona de sospecha para la segunda prueba</h2>
 <div class="row" style="flex:1">
@@ -882,7 +882,7 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <div class="pn cost rv" style="flex:1"><span class="lbl g">0,1 &lt; p ≤ 0,5 · SOSPECHA</span><span class="big g" data-to="11">11</span><p>4 malignos y 7 benignos · <b>segunda prueba</b>: biopsia con aguja gruesa</p></div>
 <div class="pn hot rv" style="flex:1"><span class="lbl r">p &gt; 0,5 · ALTA SOSPECHA</span><span class="big r" data-to="62">62</span><p>59 malignos y 3 benignos · biopsia prioritaria</p></div>
 </div>
-<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Dos umbrales crean una zona gris (0,1–0,5): 11 casos que concentran 4 de los 5 FN del umbral 0,5.</p></div><div><b>PARA TODOS</b><p>En vez de “sí o no”, tres colores: tranquila, segunda prueba o biopsia prioritaria.</p></div></div>
+<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>Dos umbrales crean una zona gris (0,1–0,5): 11 casos que concentran 4 de los 5 falsos benignos del umbral 0,5.</p></div><div><b>PARA TODOS</b><p>En vez de “sí o no”, tres colores: tranquila, segunda prueba o biopsia prioritaria.</p></div></div>
 <p class="foot">Conteos: resultado del laboratorio (Escáner, prueba) · zonas y segunda prueba: propuesta hipotética · p = probabilidad de malignidad que da la máquina</p>
 </section>
 
@@ -905,10 +905,10 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <!-- 26 AUDIT -->
 <section id="sc-audit" data-mood="p" data-taunt="¿Revisan cada falso negativo? ¿Hasta en vacaciones?" class="scr" data-room="6" data-lvl="DIRECCIÓN" data-say="El modelo no se instala y se olvida." data-note="Se mide, se compara con la biopsia, se corrige y se vuelve a validar, como cualquier prueba de laboratorio. Usa ↓ para recorrer los indicadores.">
 <p class="eb"><span class="p ctx">GESTIÓN</span>RONDAS DE AUDITORÍA<span class="kind k-hip">PROPUESTA HIPOTÉTICA</span></p>
-<h2>Vigilar que no se cuelen nuevos impostores</h2>
+<h2>Vigilar que no se cuelen nuevos falsos benignos</h2>
 <div class="tbl spot rv" style="grid-template-columns:230px 1fr 150px 130px;font-size:21px">
 <span class="h">INDICADOR</span><span class="h">CÓMO SE MIDE</span><span class="h">META</span><span class="h">CADA</span>
-<b class="r">FN confirmados</b><span>“benignos” con malignidad a 12 meses</span><span>revisar 100%</span><span>mes</span>
+<b class="r">Falsos benignos confirmados</b><span>“benignos” con malignidad a 12 meses</span><span>revisar 100%</span><span>mes</span>
 <span>Sensibilidad</span><span>VP / (VP + FN) contra biopsia</span><span>≥ 95%</span><span>trimestre</span>
 <span>VPN</span><span>benignos reales / total de “benignos”</span><span>≥ 98%</span><span>trimestre</span>
 <span>Calibración</span><span>Brier y curva de calibración; deriva</span><span>sin deriva</span><span>semestre</span>
@@ -936,18 +936,18 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 </section>
 
 <!-- 28 END -->
-<section id="sc-end" data-mood="w" data-taunt="Está bien… volveremos en una población sin validación externa." class="scr" data-room="-1" data-lvl="ALTA" data-vpn="99.0" data-fn="1" data-sfx="win" data-say="Queda un maligno entre nosotros: en esta prueba, uno quedó sin detectar. Por eso auditamos." data-note="Cierre. En este conjunto de prueba, el Escáner con umbral 0,1 detecta 63 de 64 malignos (sensibilidad 98,4%) y uno queda sin detectar; de los 98 “benignos”, 97 lo eran (VPN 99,0%). No es una garantía para casos nuevos ni significa que siempre quede uno. Tres ideas: bajar el umbral en el Escáner pasa de 5 a 1 sin detectar con 3 → 10 falsas alarmas; las AUC son similares pero el umbral cambia mucho el resultado; antes de usarlo, validar, auditar y recalibrar.">
+<section id="sc-end" data-mood="w" data-taunt="Está bien… volveremos en una población sin validación externa." class="scr" data-room="-1" data-lvl="ALTA" data-vpn="99.0" data-fn="1" data-sfx="win" data-say="Desenmascaramos a casi todos: de 13 malignos disfrazados de benigno pasamos a 1. Mejor diagnóstico, y seguimos vigilando." data-note="Cierre. La idea: fuimos desenmascarando a los malignos disfrazados de benigno (falsos negativos). La Cortadora con umbral 0,5 dejaba 13 escondidos; el Escáner con 0,5 dejaba 5; con 0,1 queda 1. Es decir, el Escáner detecta 63 de 64 malignos (sensibilidad 98,4%) y de sus 98 benignos, 97 lo eran (VPN 99,0%), a cambio de 10 falsas alarmas. El mensaje es que el diagnóstico mejora, no que haya certeza: es una muestra de prueba y no garantiza que en casos nuevos quede exactamente uno. Por eso validar, auditar y recalibrar.">
 <p class="eb" style="justify-content:center">FIN DEL TURNO · ESCÁNER CON UMBRAL 0,1<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
-<h2 style="text-align:center;font-size:60px">Queda <span class="r">un maligno</span> entre nosotros</h2><p style="text-align:center;font-size:22px;margin-top:-6px">En este conjunto de prueba, uno quedó sin detectar.</p>
+<h2 style="text-align:center;font-size:56px">Desenmascaramos a <span class="m">casi todos</span> los impostores</h2><p style="text-align:center;font-size:22px;margin-top:-6px">De los malignos disfrazados de “benigno”, pasamos de <b class="r">13</b> a <b class="m">1</b>. El diagnóstico mejora; la vigilancia sigue.</p>
 <div class="row" style="align-items:center">
 <div id="boss2" style="width:150px;height:165px"></div><div id="hero2" style="width:118px;height:162px"></div>
 <div class="col" style="flex:1">
 <div class="endstats"><p><span class="lbl">SENSIBILIDAD</span> <span class="big m">98,4%</span><span class="mut">63 de 64 malignos detectados</span></p><p><span class="lbl">VPN</span> <span class="big m" id="vpnbig">99,0%</span><span class="mut">97 de 98 “benignos” lo eran</span></p><p><span class="lbl">FALSAS ALARMAS</span> <span class="big g">10</span><span class="mut">de 107 benignos</span></p></div>
 </div></div>
 <div class="row">
-<div class="pn rv" style="flex:1"><p>Escáner: de <b class="r">5</b> a <b class="m">1</b> sin detectar al bajar el umbral; falsas alarmas de 3 a 10</p></div>
-<div class="pn rv" style="flex:1"><p>AUC similares, pero <b class="k">el umbral cambia mucho el resultado</b></p></div>
-<div class="pn rv" style="flex:1"><p>Es una muestra: falta validar en casos nuevos, auditar y recalibrar</p></div>
+<div class="pn rv" style="flex:1"><p>De una banda de <b class="r">13</b> escondidos (Cortadora, 0,5) a <b class="m">1</b> (Escáner, 0,1): <b class="m">12 desenmascarados</b> más</p></div>
+<div class="pn rv" style="flex:1"><p>Bajar el umbral del Escáner destapó <b class="m">4 de los 5</b> que quedaban, a cambio de <b class="g">7 falsas alarmas</b> más</p></div>
+<div class="pn rv" style="flex:1"><p>No es certeza: es una muestra. <b class="k">Validar, auditar y recalibrar</b></p></div>
 </div>
 <p class="k blink" style="text-align:center;font-family:var(--f-lab);font-size:24px">¿PREGUNTAS?</p>
 </section>
@@ -994,7 +994,7 @@ body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!i
 <p class="eb"><span class="p ctx">MANUAL</span>SIGLAS DEL JUEGO</p>
 <h2>Manual del jugador</h2>
 <div class="tbl" style="grid-template-columns:110px 1fr 110px 1fr;font-size:21px;gap:8px 18px">
-<b class="k">FN</b><span>falso negativo: maligno que el modelo no detecta</span><b class="k">FP</b><span>falso positivo: falsa alarma del modelo</span>
+<b class="k">FN</b><span>falso negativo = <b>falso benigno</b>: maligno que el modelo llama “benigno”</span><b class="k">FP</b><span>falso positivo: falsa alarma del modelo</span>
 <b class="k">VPN</b><span>de los “benignos”, cuántos lo son</span><b class="k">VPP</b><span>de los “malignos”, cuántos lo son</span>
 <b class="k">AUC</b><span>área bajo la curva ROC</span><b class="k">LR−</b><span>razón de verosimilitud negativa</span>
 <b class="k">OR</b><span>odds ratio</span><b class="k">DE</b><span>desviación estándar</span>
@@ -1336,12 +1336,12 @@ function w1layout(mode){const rows=$$('.drow[data-i]',w1);let order=R1.map((r,i)
  order.forEach((idx,pos)=>{const d=rows.find(x=>+x.dataset.i===idx),r=R1[idx];d.style.top=(32+pos*35)+'px';d.style.order=pos+1;d.dataset.pos=pos;
   const bar=d.querySelector('i'),v=d.querySelector('.v');if(mode===0){bar.style.width=r[4]+'%';bar.style.background=r[5]?'var(--svm)':'var(--neutral)';v.textContent=fmt(r[4],1,'%');v.className='num v'}
   else{bar.style.width=(r[1]/13*100)+'%';bar.style.background='var(--hit)';v.textContent=r[1];v.className='num v r'}});
- $('#w1metric').textContent=mode===0?'EXACTITUD (0 A 100%)':'MALIGNOS SIN DETECTAR (FN)';$('#w1vh').textContent=mode===0?'EXACTITUD':'FN';$('#w1hint').classList.toggle('done',mode===1)}
+ $('#w1metric').textContent=mode===0?'EXACTITUD (0 A 100%)':'FALSOS BENIGNOS (FN)';$('#w1vh').textContent=mode===0?'EXACTITUD':'FN';$('#w1hint').classList.toggle('done',mode===1)}
 w1layout(0);
 
 /* dial table */
 const DT=[['La Balanza (Log.)',[9,2,85.9,96.5,93.6],[3,10,95.3,85.9,92.4]],['La Clasificadora (NB)',[7,2,89.1,96.6,94.7],[4,8,93.8,88.2,93.0]],['El Comparador (kNN)',[5,3,92.2,95.2,95.3],[1,22,98.4,74.1,86.5]],['La Cortadora (LDA)',[13,0,79.7,100,92.4],[3,9,95.3,87.1,93.0]],['El Escáner (SVM)',[5,3,92.2,95.2,95.3],[1,10,98.4,86.3,93.6]]];
-const dial=$('#dial');dial.insertAdjacentHTML('beforeend','<span class="h">MÁQUINA</span><span class="h num">FN · SIN DETECTAR</span><span class="h num">FP · FALSAS ALARMAS</span><span class="h num">SENSIBILIDAD</span><span class="h num">PRECISIÓN</span><span class="h num">EXACTITUD</span>');
+const dial=$('#dial');dial.insertAdjacentHTML('beforeend','<span class="h">MÁQUINA</span><span class="h num">FN · FALSOS BENIGNOS</span><span class="h num">FP · FALSAS ALARMAS</span><span class="h num">SENSIBILIDAD</span><span class="h num">PRECISIÓN</span><span class="h num">EXACTITUD</span>');
 DT.forEach(r=>{const svm=r[0].includes('SVM');dial.insertAdjacentHTML('beforeend','<span'+(svm?' class="b" style="font-weight:700"':'')+'>'+r[0]+'</span>'+r[1].map((v,j)=>'<span class="num dc" data-j="'+j+'"></span>').join(''))});
 function cellTxt(j,v){return j>1?fmt(v,1,'%'):String(Math.round(v))}
 function deltaHTML(j,d){if(Math.abs(d)<.05)return'';const good=(j===0&&d<0)||(j===2&&d>0),cost=(j===1&&d>0)||(j===3&&d<0);return '<span class="delta '+(good?'m':cost?'g':'mut')+'">'+(d>0?'+':'−')+(j>1?fmt(Math.abs(d),1,''):Math.abs(d))+'</span>'}
@@ -1603,7 +1603,7 @@ function count(el,run){const to=+el.dataset.to,d=+(el.dataset.dec||0),s=el.datas
 async function fillBlocks(b,run){const is=$$('i',b),n=+b.dataset.n;is.forEach(i=>i.className='');for(let i=0;i<n;i++){if(run!==RUN)break;await wait(50);is[i].className='on';SFX.tick()}is.forEach((e,i)=>e.className=i<n?'on':'')}
 function setHud(sec){$('#hudlvl').textContent=sec.dataset.lvl||'TURNO DE NOCHE';$('#hudn').textContent=String(cur+1).padStart(2,'0');
  const v=sec.dataset.vpn,f=sec.dataset.fn;$('#hudk').textContent=v?'VPN':'';$('#hudv').textContent=v?fmt(+v,1,'%'):'';
- $('#hudfn').textContent=f?'SIN DETECTAR '+f:'';
+ $('#hudfn').textContent=f?'FALSOS BENIGNOS '+f:'';
  $$('#hudbar i').forEach((e,i)=>{e.className=v&&i<Math.round(+v/10)?'on':'';e.style.display=v?'':'none'});
  drawMini(+(sec.dataset.room||-1));songMode=(sec.dataset.room==='5')?'tense':'main';$('#notetxt').textContent=sec.dataset.note||''}
 
