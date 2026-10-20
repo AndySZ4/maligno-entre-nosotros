@@ -359,6 +359,24 @@ body.touch #tbar button.go{height:42px!important;font-size:19px!important}
 .funnel{display:grid;grid-template-columns:1fr 34px 1.4fr 34px 1.5fr;gap:8px;align-items:stretch}
 .funnel .far{display:grid;place-items:center;color:#FFB3DA;font-size:22px}.funnel .pn p{font-size:18px!important;line-height:1.3}.funnel .fsplit{font-size:20px!important}
 .icwrap{margin-top:14px}
+.aucx{display:grid;grid-template-columns:1.1fr 1fr;gap:14px}.aucx .pn p{font-size:17px!important;line-height:1.3}
+.duel{display:flex;align-items:center;justify-content:center;gap:14px;margin:4px 0}.duel .dc{display:flex;flex-direction:column;align-items:center;font-size:14px}
+.duel .dimg{width:62px;height:66px;display:block}.duel .dc.m b{color:var(--hitT)}.duel .dc.b b{color:var(--benT)}.duel .vs{font:400 26px 'Lilita One',sans-serif;color:#FFB3DA}
+.aucscale{margin-top:4px}.track2{position:relative;height:12px;border-radius:6px;background:linear-gradient(90deg,#4A3868,#9085e9 50%,#43CF98);margin:8px 10px 0}
+.track2 i{position:absolute;top:-4px;width:3px;height:20px;background:#FFF8EE}.track2 .ours{position:absolute;top:-8px;width:16px;height:28px;margin-left:-8px;border-radius:6px;background:#FFB3DA;border:2px solid #0B0614}
+.ticks2{position:relative;height:38px;margin:2px 10px 0}.ticks2 span{position:absolute;transform:translateX(-50%);font:600 13px 'Oswald',sans-serif;text-align:center;line-height:1.1}.ticks2 em{font:400 11px 'Atkinson Hyperlegible',sans-serif;color:var(--muted);font-style:normal}
+.oursl{text-align:center;margin-top:2px}
+.cidemo{display:flex;flex-direction:column;gap:3px}.cidemo .lbl{font-size:11px}.cbar{position:relative;height:14px;border-radius:7px;background:#1E1230}
+.cbar .rg{position:absolute;top:0;bottom:0;border-radius:7px;background:rgba(144,133,233,.6)}.cbar .pt{position:absolute;top:-3px;width:4px;height:20px;background:#FFF8EE;margin-left:-2px}
+.cl{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+#sc-aucx{gap:8px!important}#sc-aucx h2{font-size:44px}
+.aucx .pn{padding:10px 16px!important;gap:4px!important}.aucx .pn p{font-size:15.5px!important;line-height:1.25}
+.duel .dimg{width:46px;height:50px}.duel{margin:0}.ticks2{height:32px}
+#sc-aucx .pn.hot{padding:8px 16px!important}#sc-aucx .pn.hot p{font-size:17px!important}
+#sc-aucx .duo p{font-size:15px!important;line-height:1.2}
+#sc-title>.col{gap:10px!important}#sc-title h1{font-size:100px!important}
+#sc-title #hero{width:118px!important;height:160px!important}#sc-title .lu{width:84px;height:92px}
+#sc-title .mut{font-size:24px!important}
 /* ===== toolbar (all devices) ===== */
 #tbar{position:fixed;left:50%;bottom:max(6px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;z-index:100;padding:5px;border-radius:16px;background:rgba(14,8,24,.82);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);max-width:calc(100vw - 12px)}
 #tbar button{min-width:44px;height:44px;border-radius:12px;border:3px solid #0B0614;background:#FFF8EE;color:#0B0614;font:600 13px/1 'Oswald',sans-serif;letter-spacing:.5px;box-shadow:2px 2px 0 #0B0614;padding:0 10px;display:flex;align-items:center;gap:6px;cursor:pointer;touch-action:manipulation}
@@ -490,6 +508,9 @@ body.flow .cmat{grid-template-columns:62px minmax(0,1fr) minmax(0,1fr)!important
 body.flow .cmet{grid-template-columns:1fr 1fr!important}body.flow .cmet .v{font-size:20px}
 body.flow .cmet{grid-template-columns:1fr 1fr!important}
 body.flow .funnel{grid-template-columns:1fr!important}body.flow .funnel .far{transform:rotate(90deg)}
+body.flow .aucx{grid-template-columns:1fr!important}
+body.flow .track2,body.flow .ticks2{margin-left:26px;margin-right:22px}
+body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-title .mut{font-size:17px!important}
 
 </style>
 
@@ -500,7 +521,7 @@ body.flow .funnel{grid-template-columns:1fr!important}body.flow .funnel .far{tra
 <!-- 0 TITLE -->
 <section id="sc-title" class="scr" data-room="-1" data-note="Pantalla de inicio. Presiona START para activar el sonido. Todo se puede manejar con la barra de botones; en teclado: → avanza, ← vuelve, ↓ y ↑ mueven el reflector en las tablas, D repite el diálogo de la patóloga, N muestra estas notas.">
 <div class="col" style="flex:1;align-items:center;justify-content:center;text-align:center;gap:18px">
-<div class="row" style="align-items:center;gap:16px"><span id="ribbon" style="width:34px;height:44px;display:block"></span><p class="eb">OCTUBRE · DEFENSA FINAL · ANÁLISIS ESTADÍSTICO AVANZADO · LABORATORIO SEMANA 2</p></div>
+<div class="row" style="align-items:center;gap:16px"><span id="ribbon" style="width:34px;height:44px;display:block"></span><p class="eb">DEFENSA FINAL · ESTUDIO DE LA BASE DE DATOS DE CÁNCER DE MAMA WISCONSIN</p></div>
 <h1 style="font-size:112px;line-height:.88">Hay un <span class="r">maligno</span><br>entre nosotros</h1>
 <p class="mut" style="font-size:27px">Misión: desenmascarar a los malignos disfrazados de “benigno” · 569 punciones de mama · 5 máquinas</p>
 <div class="row" style="align-items:flex-end;gap:28px"><div id="hero" style="width:132px;height:182px"></div><div id="lineup" class="lineup"></div></div>
@@ -806,8 +827,44 @@ body.flow .funnel{grid-template-columns:1fr!important}body.flow .funnel .far{tra
 </section>
 
 <!-- 15 AUC -->
-<section id="sc-auc" data-pmood="think" data-mood="s" data-taunt="Todas ordenan parecido. Mientras nadie toque el umbral, yo tranquila." class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-save="Las cinco máquinas tienen AUC similares: de 0,986 a 0,992.|Con el umbral en 0,5 se cuelan de 5 a 13 falsos benignos.|El criterio (umbral) cambia mucho cuántos se cuelan; la máquina también cuenta." data-say="Todas ordenan parecido. Pero dónde cortan cambia mucho el resultado." data-note="Pregunta 8. Las barras muestran el intervalo de confianza de cada AUC: se enciman por completo. Usa la columna clínico para el estadístico y la de todos para el público general.">
-<p class="eb"><span class="p">P8</span>ORDENAR BIEN NO ES CORTAR BIEN<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
+<section id="sc-roc" class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-steps="1" data-pmood="think" data-mood="w" data-taunt="¿Me persiguen por una curva? Qué geometría tan agresiva." data-say="Cada umbral es un punto de la curva. Bajarlo es subir por ella." data-note="Pregunta 8. Zoom a la esquina superior izquierda de la curva ROC del Escáner. Los dos puntos son reales: umbral 0,5 (sensibilidad 92,2%, falsos positivos 2,8%) y umbral 0,1 (98,4% y 9,3%). El trazo entre ellos es ilustrativo. Presiona → para mover el punto.">
+<p class="eb"><span class="p">P8</span>LA CURVA ROC DEL ESCÁNER<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
+<h2>Bajar el umbral es moverse por la curva</h2>
+<div class="row" style="flex:1;align-items:center;gap:26px">
+<div id="rocplot" class="rv" style="width:520px;height:400px;flex:none"></div>
+<div class="col" style="flex:1;gap:12px">
+<div class="row" style="gap:16px"><div class="pn svm rv" style="flex:1"><span class="lbl">SENSIBILIDAD</span><span class="big b" id="rocs">92,2%</span></div><div class="pn cost rv" style="flex:1"><span class="lbl">1 − ESPECIFICIDAD</span><span class="big g" id="rocf">2,8%</span></div></div>
+<div class="duo rv" style="grid-template-columns:1fr"><div><b>PARA EL CLÍNICO</b><p>La ROC grafica sensibilidad contra 1 − especificidad en todos los umbrales; el AUC (0,992) es el área bajo esa curva.</p></div><div><b>PARA TODOS</b><p>Subir por la curva es detectar más cánceres a cambio de algunas falsas alarmas.</p></div></div>
+<p class="hint" id="rochint">→ BAJAR EL UMBRAL A 0,1</p>
+</div></div>
+<p class="foot">Zoom: ejes de 0 a 30% y de 70 a 100% · puntos reales del notebook; el trazo entre ellos es ilustrativo</p>
+</section>
+
+<section id="sc-aucx" class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-pmood="explain" data-mood="w" data-say="El AUC responde una pregunta sencilla: si pongo una maligna y una benigna frente a la máquina, ¿a cuál le sospecha más?" data-taunt="¿Medir qué tan bien ordenan? Yo prefiero el desorden." data-note="Explicación del AUC y del IC antes de la tabla. AUC: probabilidad de que, al tomar al azar un caso maligno y uno benigno, la máquina le dé mayor probabilidad al maligno. Es el área bajo la curva ROC. 0,5 es una moneda; 1 es perfecto. No depende del umbral: por eso no dice cuántos falsos benignos habrá. IC 95%: el AUC se midió en un examen de 171 casos; con otro examen saldría un poco distinto. El intervalo es el rango de valores compatibles con los datos. Si los intervalos de dos máquinas se enciman, no se demuestra que una sea mejor.">
+<p class="eb"><span class="p">P8</span>EN PALABRAS · AUC E IC<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
+<h2>¿Qué miden el AUC y su intervalo?</h2>
+<div class="aucx">
+<div class="pn rv"><span class="lbl k">AUC · EL DUELO DE PAREJAS</span>
+<div class="duel"><div class="dc m"><span class="dimg" data-k="m1"></span><b>maligna</b><span>sospecha 0,83</span></div><div class="vs">VS</div><div class="dc b"><span class="dimg" data-k="b0"></span><b>benigna</b><span>sospecha 0,12</span></div></div>
+<p>Toma al azar una maligna y una benigna. Si la máquina le da <b>más sospecha a la maligna</b>, gana el duelo. El AUC es el porcentaje de duelos que gana.</p>
+<div class="aucscale"><div class="track2"><i style="left:0%"></i><i style="left:40%"></i><i style="left:80%"></i><span class="ours" style="left:97.2%"></span></div>
+<div class="ticks2"><span style="left:0%">0,5<br><em>moneda al aire</em></span><span style="left:40%">0,7<br><em>aceptable</em></span><span style="left:80%">0,9<br><em>excelente</em></span><span style="left:100%" class="k">1<br><em>perfecto</em></span></div>
+<p class="oursl">Nuestras 5 máquinas: <b class="k">0,986 a 0,992</b> → ganan 99 de cada 100 duelos</p></div>
+</div>
+<div class="pn rv"><span class="lbl k">IC 95% · EL MARGEN DE DUDA</span>
+<p>El AUC salió de <b>un solo examen de 171 pacientes</b>. Con otras 171 saldría un poco distinto. El IC 95% es el rango donde, con esos datos, es razonable que esté el valor real.</p>
+<div class="cidemo"><span class="lbl">ESCÁNER (SVM)</span><div class="cbar"><span class="rg" style="left:52%;width:48%"></span><span class="pt" style="left:84%"></span></div><div class="cl"><span>0,95</span><span><b>0,976</b> ← rango → <b>1</b></span><span>1</span></div>
+<span class="lbl">CORTADORA (LDA)</span><div class="cbar"><span class="rg" style="left:52%;width:48%"></span><span class="pt" style="left:84%"></span></div>
+<span class="lbl">CLASIFICADORA (NB)</span><div class="cbar"><span class="rg" style="left:30%;width:70%"></span><span class="pt" style="left:72%"></span></div></div>
+<p><b>Si los rangos se enciman</b>, no podemos decir que una máquina ordene mejor que otra. Aquí se enciman todos.</p>
+</div></div>
+<div class="pn hot rv"><p style="font-size:20px"><b class="r">Ojo:</b> el AUC mide qué tan bien <b>ordena</b> la máquina, sin mirar el umbral. Por eso no dice cuántos falsos benignos habrá: <b>eso lo decide el criterio</b>.</p></div>
+<div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>AUC = P(puntaje maligno &gt; puntaje benigno) = área bajo la ROC (equivale al estadístico de Mann-Whitney). IC 95% de Hanley y McNeil (1982), recortado en 1.</p></div><div><b>PARA TODOS</b><p>AUC: qué tan seguido la máquina sospecha más de la maligna. IC: el margen de duda por haber medido con solo 171 pacientes.</p></div></div>
+<p class="foot">Resultado del laboratorio · las parejas del ejemplo son ilustrativas; el AUC y los IC son los del notebook · escala de las barras: 0,95 a 1</p>
+</section>
+
+<section id="sc-auc" data-pmood="think" data-mood="s" data-taunt="Todas ordenan parecido. Mientras nadie toque el umbral, yo tranquila." class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-save="Las cinco máquinas tienen AUC similares: de 0,986 a 0,992.|Con el umbral en 0,5 se cuelan de 5 a 13 falsos benignos.|El criterio (umbral) cambia mucho cuántos se cuelan; la máquina también cuenta." data-say="Las cinco ganan casi todos los duelos y sus rangos se enciman. Ordenan parecido; lo que cambia el resultado es dónde cortan." data-note="Pregunta 8. Las barras muestran el intervalo de confianza de cada AUC: se enciman por completo. Usa la columna clínico para el estadístico y la de todos para el público general.">
+<p class="eb"><span class="p">P8</span>LAS CINCO MÁQUINAS · AUC E IC 95%<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2>AUC parecidas, decisiones distintas</h2>
 <div class="tbl spot rv" style="grid-template-columns:260px 1fr 90px 130px">
 <span class="h">MÁQUINA</span><span class="h">AUC E IC 95% (ESCALA 0,95 A 1)</span><span class="h num">AUC</span><span class="h num">IC 95%</span>
@@ -824,20 +881,6 @@ body.flow .funnel{grid-template-columns:1fr!important}body.flow .funnel .far{tra
 <p class="foot">Resultado del laboratorio · IC de Hanley y McNeil (1982), recortados en 1 · barra = intervalo · raya blanca = AUC</p>
 </section>
 
-<!-- ROC -->
-<section id="sc-roc" class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-steps="1" data-pmood="think" data-mood="w" data-taunt="¿Me persiguen por una curva? Qué geometría tan agresiva." data-say="Cada umbral es un punto de la curva. Bajarlo es subir por ella." data-note="Pregunta 8. Zoom a la esquina superior izquierda de la curva ROC del Escáner. Los dos puntos son reales: umbral 0,5 (sensibilidad 92,2%, falsos positivos 2,8%) y umbral 0,1 (98,4% y 9,3%). El trazo entre ellos es ilustrativo. Presiona → para mover el punto.">
-<p class="eb"><span class="p">P8</span>LA CURVA ROC DEL ESCÁNER<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
-<h2>Bajar el umbral es moverse por la curva</h2>
-<div class="row" style="flex:1;align-items:center;gap:26px">
-<div id="rocplot" class="rv" style="width:520px;height:400px;flex:none"></div>
-<div class="col" style="flex:1;gap:12px">
-<div class="row" style="gap:16px"><div class="pn svm rv" style="flex:1"><span class="lbl">SENSIBILIDAD</span><span class="big b" id="rocs">92,2%</span></div><div class="pn cost rv" style="flex:1"><span class="lbl">1 − ESPECIFICIDAD</span><span class="big g" id="rocf">2,8%</span></div></div>
-<div class="duo rv" style="grid-template-columns:1fr"><div><b>PARA EL CLÍNICO</b><p>La ROC grafica sensibilidad contra 1 − especificidad en todos los umbrales; el AUC (0,992) es el área bajo esa curva.</p></div><div><b>PARA TODOS</b><p>Subir por la curva es detectar más cánceres a cambio de algunas falsas alarmas.</p></div></div>
-<p class="hint" id="rochint">→ BAJAR EL UMBRAL A 0,1</p>
-</div></div>
-<p class="foot">Zoom: ejes de 0 a 30% y de 70 a 100% · puntos reales del notebook; el trazo entre ellos es ilustrativo</p>
-</section>
-
 <section id="sc-q3" class="scr quizscr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-ok="1" data-good="¡Eso! Misma máquina, otro criterio: de 5 falsos benignos a 1, a cambio de 7 falsas alarmas más." data-bad="No: fue la misma máquina con las mismas variables. Lo que cambió fue el criterio: el umbral bajó de 0,5 a 0,1." data-mood="s" data-taunt="Yo voto por la C. Más variables, más lugares donde esconderme." data-note="Quiz 3. Respuesta B. Elegir máquina también importa (con 0,5: Cortadora 13, Escáner 5), pero dentro del Escáner el cambio de 5 a 1 viene del umbral.">
 <p class="eb"><span class="p">P8</span>QUIZ RELÁMPAGO<span class="kind k-lab">PREGUNTA AL PÚBLICO</span></p>
 <h2>Las AUC son parecidas. En el Escáner, ¿qué bajó los falsos benignos de 5 a 1?</h2>
@@ -845,6 +888,11 @@ body.flow .funnel{grid-template-columns:1fr!important}body.flow .funnel .far{tra
 <div class="pn qfb" aria-live="polite"><p>Toquen una respuesta (o usen las teclas 1, 2 y 3).</p></div>
 <p class="foot">Después de responder, ▶ sigue el recorrido</p>
 </section>
+
+<!-- ROC -->
+
+
+
 
 
 <!-- 16 EMERGENCY -->
@@ -1904,6 +1952,7 @@ const MUSIC_MP3={"main": "data:audio/mpeg;base64,//tQxAAABkQRN1RhgAHqJiknGLAAAAF
   RESET[id]=()=>{done=false;fb.className='pn qfb';fb.innerHTML='<p>Toquen una respuesta (o usen las teclas 1, 2 y 3).</p>';sec.querySelectorAll('.qopt').forEach(b=>{b.disabled=false;b.classList.remove('right','wrong')})}});
  addEventListener('keydown',e=>{const s=document.querySelector('.scr.on');if(!s||!s.__answer)return;const k='123'.indexOf(e.key);if(k>=0){e.preventDefault();s.__answer(k)}});
 })();
+$$('.dimg').forEach(e=>{e.innerHTML=sprHTML(e.dataset.k,'cellsvg')});
 
 /* ===== UI: toolbar for every device, audio panel, reading (flow) layout for small screens ===== */
 (function(){
