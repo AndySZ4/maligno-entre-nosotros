@@ -427,6 +427,21 @@ body.flow #sc-matrix .tbl{grid-template-columns:96px minmax(0,1fr) minmax(0,1fr)
 /* let the document itself scroll in reading mode (iOS needs html to scroll, not body) */
 html.flow{overflow-y:auto!important;overflow-x:hidden!important;height:auto!important}
 html.flow body{overflow:visible!important;height:auto!important;min-height:100%}
+/* prep: steps stacked, arrows pointing down */
+body.flow .flow4,body.flow #sc-prep [style*="grid-template-columns"]{display:flex!important;flex-direction:column!important;gap:6px!important}
+body.flow #sc-prep .ar{transform:rotate(90deg);align-self:center;font-size:16px}
+/* dial table: fits the screen, no sideways scroll, deltas under each value */
+body.flow #dial{grid-template-columns:86px repeat(5,minmax(0,1fr))!important;overflow-x:visible!important;font-size:12.5px!important;gap:8px 4px!important}
+body.flow #dial .delta{display:block;font-size:11px;margin:0}
+body.flow #dial .h{font-size:9px!important;letter-spacing:0!important}
+body.flow #dial + .hint::before{content:""}
+/* end screen: characters small and side by side */
+body.flow #sc-end .row:has(#boss2){display:grid!important;grid-template-columns:1fr 1fr;align-items:end!important;justify-items:center}
+body.flow #sc-end .row:has(#boss2)>.col{grid-column:1/-1;justify-self:stretch}
+body.flow #boss2{width:96px!important;height:104px!important}body.flow #hero2{width:96px!important;height:130px!important}
+/* threshold label sits beside the line, not on it */
+body.flow .uline span{left:10px;font-size:11px;padding:0 6px}
+body.flow .path{display:flex!important;flex-direction:column!important;gap:6px!important}body.flow .path .ar{transform:rotate(90deg);align-self:center}body.flow .path .pn p{font-size:16px!important}
 
 </style>
 
