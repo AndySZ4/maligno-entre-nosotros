@@ -397,6 +397,13 @@ body.touch #tbar button.go{height:42px!important;font-size:19px!important}
 #sc-title>.col{gap:10px!important}#sc-title h1{font-size:100px!important}
 #sc-title #hero{width:118px!important;height:160px!important}#sc-title .lu{width:84px;height:92px}
 #sc-title .mut{font-size:24px!important}
+.pilekey{font-size:17px;line-height:1.3;margin-top:-4px}
+.siglas{font-size:15px;color:var(--muted);margin-top:-6px}.siglas i{color:var(--ink)}
+#icons canvas.icon{width:170px!important;height:170px!important}#icons .mut{font-size:13px!important;text-align:center;line-height:1.25}
+.unm{font:600 13px 'Oswald',sans-serif;letter-spacing:.5px;color:#43CF98;text-align:center}.unm b{font-size:16px}
+#sc-icons{gap:8px!important}#sc-icons .icwrap{margin-top:4px}#sc-icons .duo p{font-size:15px!important}
+#icons canvas.icon{width:148px!important;height:148px!important}#sc-icons .icwrap{margin-top:22px!important}
+#sc-icons .prevnote{font-size:15px;padding:2px 10px}#sc-icons .duo>div{padding:6px 12px}#sc-icons .duo p{font-size:14px!important}
 /* ===== toolbar (all devices) ===== */
 #tbar{position:fixed;left:50%;bottom:max(6px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;z-index:100;padding:5px;border-radius:16px;background:rgba(14,8,24,.82);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);max-width:calc(100vw - 12px)}
 #tbar button{min-width:44px;height:44px;border-radius:12px;border:3px solid #0B0614;background:#FFF8EE;color:#0B0614;font:600 13px/1 'Oswald',sans-serif;letter-spacing:.5px;box-shadow:2px 2px 0 #0B0614;padding:0 10px;display:flex;align-items:center;gap:6px;cursor:pointer;touch-action:manipulation}
@@ -859,21 +866,22 @@ body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-t
 <div class="duo rv" style="grid-template-columns:1fr"><div><b>PARA EL CLÍNICO</b><p>La ROC grafica sensibilidad contra 1 − especificidad en todos los umbrales; el AUC (0,992) es el área bajo esa curva.</p></div><div><b>PARA TODOS</b><p>Subir por la curva es detectar más cánceres a cambio de algunas falsas alarmas.</p></div></div>
 <p class="hint" id="rochint">→ BAJAR EL UMBRAL A 0,1</p>
 </div></div>
-<p class="foot">Zoom: ejes de 0 a 30% y de 70 a 100% · puntos reales del notebook; el trazo entre ellos es ilustrativo</p>
+<p class="foot">ROC = Receiver Operating Characteristic: sensibilidad contra falsas alarmas en cada umbral · zoom: ejes de 0 a 30% y de 70 a 100% · puntos reales del notebook; el trazo entre ellos es ilustrativo</p>
 </section>
 
 <section id="sc-aucx" class="scr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-pmood="explain" data-mood="w" data-say="El AUC responde una pregunta sencilla: si pongo una maligna y una benigna frente a la máquina, ¿a cuál le sospecha más?" data-taunt="¿Medir qué tan bien ordenan? Yo prefiero el desorden." data-note="Explicación del AUC y del IC antes de la tabla. AUC: probabilidad de que, al tomar al azar un caso maligno y uno benigno, la máquina le dé mayor probabilidad al maligno. Es el área bajo la curva ROC. 0,5 es una moneda; 1 es perfecto. No depende del umbral: por eso no dice cuántos falsos benignos habrá. IC 95%: el AUC se midió en un examen de 171 casos; con otro examen saldría un poco distinto. El intervalo es el rango de valores compatibles con los datos. Si los intervalos de dos máquinas se enciman, no se demuestra que una sea mejor.">
 <p class="eb"><span class="p">P8</span>EN PALABRAS · AUC E IC<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
 <h2>¿Qué miden el AUC y su intervalo?</h2>
+<p class="siglas rv"><b>AUC</b> = <i>Area Under the Curve</i>, área bajo la curva ROC · <b>ROC</b> = <i>Receiver Operating Characteristic</i>, la curva de detección contra falsas alarmas · <b>IC 95%</b> = intervalo de confianza del 95%</p>
 <div class="aucx">
-<div class="pn rv"><span class="lbl k">AUC · EL DUELO DE PAREJAS</span>
+<div class="pn rv"><span class="lbl k">AUC = ÁREA BAJO LA CURVA · EL DUELO DE PAREJAS</span>
 <div class="duel"><div class="dc m"><span class="dimg" data-k="m1"></span><b>maligna</b><span>sospecha 0,83</span></div><div class="vs">VS</div><div class="dc b"><span class="dimg" data-k="b0"></span><b>benigna</b><span>sospecha 0,12</span></div></div>
 <p>Toma al azar una maligna y una benigna. Si la máquina le da <b>más sospecha a la maligna</b>, gana el duelo. El AUC es el porcentaje de duelos que gana.</p>
 <div class="aucscale"><div class="track2"><i style="left:0%"></i><i style="left:40%"></i><i style="left:80%"></i><span class="ours" style="left:97.2%"></span></div>
 <div class="ticks2"><span style="left:0%">0,5<br><em>moneda al aire</em></span><span style="left:40%">0,7<br><em>aceptable</em></span><span style="left:80%">0,9<br><em>excelente</em></span><span style="left:100%" class="k">1<br><em>perfecto</em></span></div>
 <p class="oursl">Nuestras 5 máquinas: <b class="k">0,986 a 0,992</b> → ganan 99 de cada 100 duelos</p></div>
 </div>
-<div class="pn rv"><span class="lbl k">IC 95% · EL MARGEN DE DUDA</span>
+<div class="pn rv"><span class="lbl k">IC 95% = INTERVALO DE CONFIANZA DEL 95% · EL MARGEN DE DUDA</span>
 <p>El AUC salió de <b>un solo examen de 171 pacientes</b>. Con otras 171 saldría un poco distinto. El IC 95% es el rango donde, con esos datos, es razonable que esté el valor real.</p>
 <div class="cidemo"><span class="lbl">ESCÁNER (SVM)</span><div class="cbar"><span class="rg" style="left:52%;width:48%"></span><span class="pt" style="left:84%"></span></div><div class="cl"><span>0,95</span><span><b>0,976</b> ← rango → <b>1</b></span><span>1</span></div>
 <span class="lbl">CORTADORA (LDA)</span><div class="cbar"><span class="rg" style="left:52%;width:48%"></span><span class="pt" style="left:84%"></span></div>
@@ -900,7 +908,7 @@ body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-t
 <div class="pn"><span class="lbl k">PARA EL CLÍNICO</span><p>Discriminación excelente en las cinco. Los IC se superponen: no se demostró diferencia (la prueba formal sería DeLong). Eso no prueba que sean equivalentes.</p></div>
 <div class="pn"><span class="lbl k">PARA TODOS</span><p>Si tomo al azar una paciente con tumor maligno y una con benigno, la máquina le da más sospecha a la maligna el 99% de las veces. Es una forma de leer el AUC, no un examen de 100 parejas.</p></div>
 </div>
-<p class="foot">Resultado del laboratorio · IC de Hanley y McNeil (1982), recortados en 1 · barra = intervalo · raya blanca = AUC</p>
+<p class="foot">Resultado del laboratorio · AUC = área bajo la curva ROC · IC 95% = intervalo de confianza del 95%, de Hanley y McNeil (1982), recortado en 1 · barra = intervalo · raya blanca = AUC</p>
 </section>
 
 <section id="sc-q3" class="scr quizscr" data-room="4" data-lvl="LAB. DE MÁQUINAS" data-ok="1" data-good="¡Eso! Misma máquina, otro criterio: de 5 falsos benignos a 1, a cambio de 7 falsas alarmas más." data-bad="No: fue la misma máquina con las mismas variables. Lo que cambió fue el criterio: el umbral bajó de 0,5 a 0,1." data-mood="s" data-taunt="Yo voto por la C. Más variables, más lugares donde esconderme." data-note="Quiz 3. Respuesta B. Elegir máquina también importa (con 0,5: Cortadora 13, Escáner 5), pero dentro del Escáner el cambio de 5 a 1 viene del umbral.">
@@ -1051,9 +1059,10 @@ body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-t
 </section>
 
 <!-- 23 ICONS -->
-<section id="sc-icons" data-mood="p" data-taunt="¡Una de cada cien! Ya no cabemos en el escondite." data-save="Con un costo supuesto de 9:1, el umbral teórico es 0,1.|Con 0,1, el Escáner desenmascara 63 de 64 malignos (98,4%) a cambio de 7 falsas alarmas más que con 0,5.|De sus “benignos”, 97 de 98 lo eran: VPN 99,0%." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Dos cambios, por separado: primero la máquina, después el umbral." data-note="Frecuencias naturales: de cada 100 casos que el modelo llama benigno, cuántos eran malignos (1 − VPN). Se separan los dos efectos. Paso 1, cambia la máquina con el umbral fijo en 0,5: Cortadora 11, Balanza 8, Escáner 5. Paso 2, el Escáner baja el umbral a 0,1: de 5 a 1. Ojo: vale para esta prueba, con 37% de malignos; con otra prevalencia los números cambian (ver la pantalla del veredicto).">
+<section id="sc-icons" data-mood="p" data-taunt="¡Una de cada cien! Ya no cabemos en el escondite." data-save="Con un costo supuesto de 9:1, el umbral teórico es 0,1.|Con 0,1, el Escáner desenmascara 63 de 64 malignos (98,4%) a cambio de 7 falsas alarmas más que con 0,5.|De sus “benignos”, 97 de 98 lo eran: VPN 99,0%." class="scr" data-room="5" data-lvl="SALA DEL COMITÉ" data-say="Esta es la pila de los que la máquina llamó benigno. Los rojos se colaron. Primero cambiamos de máquina y después bajamos el umbral para sacarlos de la pila." data-note="Frecuencias naturales: de cada 100 casos que el modelo llama benigno, cuántos eran malignos (1 − VPN). Se separan los dos efectos. Paso 1, cambia la máquina con el umbral fijo en 0,5: Cortadora 11, Balanza 8, Escáner 5. Paso 2, el Escáner baja el umbral a 0,1: de 5 a 1. Ojo: vale para esta prueba, con 37% de malignos; con otra prevalencia los números cambian (ver la pantalla del veredicto).">
 <p class="eb"><span class="p">P11</span>DE CADA 100 “BENIGNOS”<span class="kind k-lab">RESULTADO DEL LABORATORIO</span></p>
-<h2>¿Cuántos “benignos” eran malignos disfrazados?</h2>
+<h2>La pila de “benignos”: ¿cuántos se colaron?</h2>
+<p class="pilekey rv">Cada grilla es la <b>pila de casos que la máquina llamó “benigno”</b>. <b class="r">Rojo</b>: maligno que se coló (falso benigno). <b class="l">Morado</b>: benigno de verdad. Al bajar el umbral, los rojos salen de la pila y quedan <b class="m">desenmascarados</b>.</p>
 <div class="icwrap"><div class="icgrp g1"><span class="ich">① CAMBIA LA MÁQUINA · UMBRAL FIJO EN 0,5</span></div><div class="icgrp g2"><span class="ich">② EL ESCÁNER BAJA EL UMBRAL</span></div><div class="row" id="icons" style="justify-content:space-between;align-items:flex-start"></div></div><p class="prevnote rv">Con <b>37% de malignos</b>, como en esta prueba. Si hay menos malignos en la población, estas cifras bajan; si hay más, suben.</p>
 <div class="duo rv"><div><b>PARA EL CLÍNICO</b><p>1 − VPN. Máquina (umbral 0,5): LDA 10,8% → Log. 7,9% → SVM 4,6%. Umbral en SVM: 4,6% → 1,0%.</p></div><div><b>PARA TODOS</b><p>Cambiar de máquina baja de 11 a 5 los falsos benignos por cada 100 “benignos”; ajustar el criterio del Escáner, de 5 a 1.</p></div></div>
 <p class="foot">Resultado del laboratorio · FN / (FN + VN) redondeado a 100 · conjunto de prueba, prevalencia de 37%</p>
@@ -1182,7 +1191,7 @@ body.flow #sc-title h1{font-size:clamp(38px,12vw,72px)!important}body.flow #sc-t
 <div class="tbl" style="grid-template-columns:110px 1fr 110px 1fr;font-size:21px;gap:8px 18px">
 <b class="k">FN</b><span>falso negativo = <b>falso benigno</b>: maligno que el modelo llama “benigno”</span><b class="k">FP</b><span>falso positivo: falsa alarma del modelo</span>
 <b class="k">VPN</b><span>de los “benignos”, cuántos lo son</span><b class="k">VPP</b><span>de los “malignos”, cuántos lo son</span>
-<b class="k">AUC</b><span>área bajo la curva ROC</span><b class="k">LR−</b><span>razón de verosimilitud negativa</span>
+<b class="k">AUC</b><span>Area Under the Curve: área bajo la curva ROC</span><b class="k">ROC</b><span>Receiver Operating Characteristic: sensibilidad contra falsas alarmas en todos los umbrales</span><b class="k">IC 95%</b><span>intervalo de confianza del 95%: el margen de duda de una cifra</span><b class="k">LR−</b><span>razón de verosimilitud negativa</span>
 <b class="k">OR</b><span>odds ratio</span><b class="k">DE</b><span>desviación estándar</span>
 <b class="k">PAAF</b><span>punción aspiración con aguja fina</span><b class="k">TDLU</b><span>unidad ductolobulillar terminal</span>
 <b class="k">BI-RADS</b><span>escala de sospecha en imagen</span><b class="k">LOOCV</b><span>validación dejando uno fuera</span>
@@ -1975,6 +1984,11 @@ const MUSIC_MP3={"main": "data:audio/mpeg;base64,//tQxAAABkQRN1RhgAHqJiknGLAAAAF
  addEventListener('keydown',e=>{const s=document.querySelector('.scr.on');if(!s||!s.__answer)return;const k='123'.indexOf(e.key);if(k>=0){e.preventDefault();s.__answer(k)}});
 })();
 $$('.dimg').forEach(e=>{e.innerHTML=sprHTML(e.dataset.k,'cellsvg')});
+
+/* pila de "benignos": explain each column (colados vs desenmascarados) */
+(function(){const VP=[51,55,59,63];$$('#icons > .col').forEach((c,i)=>{const sm=c.querySelector('.mut');if(!sm)return;const t=c.querySelector('.mid').textContent.split(' de ');
+ sm.innerHTML='malignos colados entre sus “benignos” · '+sm.textContent.replace(' de cada 100',' de 100');
+ c.insertAdjacentHTML('beforeend','<span class="unm">desenmascaró <b>'+VP[i]+'</b> de 64 malignos</span>')})})();
 
 /* ===== UI: toolbar for every device, audio panel, reading (flow) layout for small screens ===== */
 (function(){
