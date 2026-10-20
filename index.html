@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="es">
 <meta charset="utf-8">
 <title>Un maligno entre nosotros</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -422,6 +424,9 @@ body.flow .ruler{margin:0 18px!important}
 body.flow #sc-emerg .pn [style*="width:900px"]{width:calc(100% - 20px)!important;margin:6px 10px 0}
 body.flow #sc-emerg .pn [style*="left:438px"]{left:calc(50% - 10px)!important}
 body.flow #sc-matrix .tbl{grid-template-columns:96px minmax(0,1fr) minmax(0,1fr)!important;font-size:13px!important}body.flow #sc-matrix .tbl b{font-size:13px}
+/* let the document itself scroll in reading mode (iOS needs html to scroll, not body) */
+html.flow{overflow-y:auto!important;overflow-x:hidden!important;height:auto!important}
+html.flow body{overflow:visible!important;height:auto!important;min-height:100%}
 
 </style>
 
@@ -1028,9 +1033,9 @@ function saveVol(){try{localStorage.setItem('maligno_vol',JSON.stringify({m:musV
 function musOut(){if(!musG){musG=AC.createGain();musG.gain.value=musVol*5.2;const hp1=AC.createBiquadFilter(),hp2=AC.createBiquadFilter();hp1.type=hp2.type='highpass';hp1.frequency.value=hp2.frequency.value=160;hp1.Q.value=hp2.Q.value=.7;musG.connect(hp1);hp1.connect(hp2);hp2.connect(master);
   const d=AC.createDelay(1),fb=AC.createGain(),lp=AC.createBiquadFilter();d.delayTime.value=.045;fb.gain.value=.12;lp.type='lowpass';lp.frequency.value=1600;
   revIn=AC.createGain();revIn.gain.value=.12;revIn.connect(d);d.connect(lp);lp.connect(fb);fb.connect(d);lp.connect(musG)}return musG}
-function sfxOut(){if(!sfxG){sfxG=AC.createGain();sfxG.gain.value=sfxVol*.5;sfxG.connect(master)}return sfxG}
+function sfxOut(){if(!sfxG){sfxG=AC.createGain();sfxG.gain.value=sfxVol*2.4;sfxG.connect(master)}return sfxG}
 function setMusVol(v){musVol=v;if(window.__fileMusicVol)window.__fileMusicVol();if(musG)musG.gain.setTargetAtTime(v*5.2,AC.currentTime,.05);saveVol()}
-function setSfxVol(v){sfxVol=v;if(sfxG)sfxG.gain.setTargetAtTime(v*.5,AC.currentTime,.05);saveVol()}
+function setSfxVol(v){sfxVol=v;if(sfxG)sfxG.gain.setTargetAtTime(v*2.4,AC.currentTime,.05);saveVol()}
 function envG(g,t,a,v,hold,rel){g.gain.setValueAtTime(.0001,t);g.gain.linearRampToValueAtTime(v,t+a);g.gain.setValueAtTime(v,t+a+hold);g.gain.exponentialRampToValueAtTime(.0005,t+a+hold+rel)}
 let NB=null;function nbuf(){if(!NB){const n=AC.sampleRate,b=AC.createBuffer(1,n,n),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=Math.random()*2-1;NB=b}return NB}
 /* ---- detective swing in D minor: walking bass, brushes + snaps, Charleston piano, muted trumpet & clarinet ---- */
@@ -1732,7 +1737,7 @@ const MUSIC_MP3={"main": "data:audio/mpeg;base64,//tQxAAABkQRN1RhgAHqJiknGLAAAAF
    el.style.gridTemplateColumns=el.dataset.gtc.replace(/(\d+(?:\.\d+)?)px/g,(m,n)=>'minmax(0,'+Math.max(40,Math.round(n*.5))+'px)').replace(/(^|\s)1fr/g,'$1minmax(0,1fr)').replace(/(^|\s)auto/g,'$1minmax(0,auto)')}
   else if(el.dataset.gtc){el.style.gridTemplateColumns=el.dataset.gtc}})}
  let flowOn=null;
- function applyView(){const f=wantFlow();if(f!==flowOn){flowOn=f;document.body.classList.toggle('flow',f);scaleGrids(f);placeDlg()}
+ function applyView(){const f=wantFlow();if(f!==flowOn){flowOn=f;document.body.classList.toggle('flow',f);document.documentElement.classList.toggle('flow',f);scaleGrids(f);placeDlg()}
   document.body.classList.toggle('slide',!f);fit();$('#bview').textContent=f?'▭':'▤';$('#bview').title=f?'Cambiar a vista diapositiva':'Cambiar a vista de lectura';
   $('#bview').setAttribute('aria-label',$('#bview').title)}
  /* override stage fit: leave room for the toolbar */
